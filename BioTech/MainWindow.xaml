@@ -1,0 +1,107 @@
+﻿<Window x:Class="BioTech.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BioTech"
+        xmlns:viewModel="clr-namespace:BioTech.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="800" Width="1300"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="#272537"
+            MouseDown="BorderMouseDown">
+        <Grid Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <RadioButton Content="BioTech"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         Margin="0,0,0,0"
+                         Height="70"
+                         Foreground="White"
+                         FontSize="34"
+                         FontWeight="SemiBold"
+                         Style="{StaticResource MenuButtonTheme}"
+                         Command="{Binding HomeViewCommand}"/>
+
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+
+                <Button Name="ButtonMinimize" Width="55" Height="40" Content="_" FontSize="16" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+                        Click="ButtonMinimizeClick" MouseEnter="ButtonMinimizeHoverOn" MouseLeave="ButtonMinimizeHoverOff"/>
+                <Button Name="ButtonMaximize" Width="55" Height="40" Content="▢" FontSize="16" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+                        Click="ButtonResizeClick" MouseEnter="ButtonMaximizeHoverOn" MouseLeave="ButtonMaximizeHoverOff"/>
+                <Button Name="ButtonClose" Width="55" Height="40" Content="╳" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+                        Click="ButtonCloseClick" MouseEnter="ButtonCloseHoverOn" MouseLeave="ButtonCloseHoverOff"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0">
+                <RadioButton Content="Anagrafica"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AnagraficaViewCommand}"/>
+
+                <RadioButton Content="Fit test"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding FitTestViewCommand}"/>
+
+                <RadioButton Content="Archivio diete"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding DieteViewCommand}"/>
+
+                <RadioButton Content="Archivio allenamenti"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AllenamentiViewCommand}"/>
+
+                <RadioButton Content="Archivio alimenti"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding AlimentiViewCommand}"/>
+            </StackPanel>
+
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+        </Grid>
+        
+
+    </Border>
+</Window>
