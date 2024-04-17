@@ -7,22 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MVVM\View\PrimaryViews\AlimentiView.xaml.cs">
+    <Compile Update="MVVM\View\AlimentiView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PrimaryViews\AllenamentiView.xaml.cs">
+    <Compile Update="MVVM\View\AllenamentiView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PrimaryViews\AnagraficaView.xaml.cs">
+    <Compile Update="MVVM\View\AnagraficaView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PrimaryViews\DieteView.xaml.cs">
+    <Compile Update="MVVM\View\DieteView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PrimaryViews\FitTestView.xaml.cs">
+    <Compile Update="MVVM\View\FitTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PrimaryViews\HomeView.xaml.cs">
+    <Compile Update="MVVM\View\HomeView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,22 +30,28 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\AlimentiView.xaml">
+    <Page Update="MVVM\View\AlimentiView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\AllenamentiView.xaml">
+    <Page Update="MVVM\View\AllenamentiView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\AnagraficaView.xaml">
+    <Page Update="MVVM\View\AnagraficaView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\DieteView.xaml">
+    <Page Update="MVVM\View\DieteView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\FitTestView.xaml">
+    <Page Update="MVVM\View\FitTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\PrimaryViews\HomeView.xaml">
+    <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AllenamentiButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\CategoriaRadioButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\MenuButtonTheme.xaml">

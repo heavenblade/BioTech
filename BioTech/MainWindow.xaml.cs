@@ -11,9 +11,9 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        MongoDbClient.Initialize();
-
         InitializeComponent();
+
+        MongoDbClient.Initialize();
     }
 
     private void BorderMouseDown(object sender, MouseButtonEventArgs e)
@@ -21,11 +21,14 @@ public partial class MainWindow : Window
         if (e.LeftButton == MouseButtonState.Pressed) DragMove();
     }
 
-    private void ButtonMinimizeClick(object sender, RoutedEventArgs e) => Application.Current.MainWindow.WindowState = WindowState.Minimized;
+    private void ButtonMinimizeClick(object sender, RoutedEventArgs e) => 
+        Application.Current.MainWindow.WindowState = WindowState.Minimized;
 
-    private void ButtonResizeClick(object sender, RoutedEventArgs e) => Application.Current.MainWindow.WindowState = Application.Current.MainWindow.WindowState != WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
+    private void ButtonResizeClick(object sender, RoutedEventArgs e) => 
+        Application.Current.MainWindow.WindowState = Application.Current.MainWindow.WindowState != WindowState.Maximized ? WindowState.Maximized : WindowState.Normal;
 
-    private void ButtonCloseClick(object sender, RoutedEventArgs e) => Application.Current.Shutdown();
+    private void ButtonCloseClick(object sender, RoutedEventArgs e) => 
+        Application.Current.Shutdown();
 
     private void ButtonMinimizeHoverOn(object sender, RoutedEventArgs e) { }
 

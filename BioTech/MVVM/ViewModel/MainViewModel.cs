@@ -20,7 +20,6 @@ internal class MainViewModel : ObservableObject
     public RelayCommand AlimentiViewCommand { get; set; }
 
 
-
     private object _currentView;
 
     public object CurrentView
@@ -74,4 +73,5 @@ internal class MainViewModel : ObservableObject
 
         CurrentView = HomeViewModel;
     }
+    
 }
