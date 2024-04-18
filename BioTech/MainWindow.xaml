@@ -4,18 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BioTech"
+        xmlns:view="clr-namespace:BioTech.MVVM.View"
         xmlns:viewModel="clr-namespace:BioTech.MVVM.ViewModel"
+        xmlns:commands="clr-namespace:BioTech.MVVM.Commands"
         mc:Ignorable="d"
         Height="800" Width="1300"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
-        AllowsTransparency="True"
-        >
+        AllowsTransparency="True">
 
-    <Window.DataContext>
-        <viewModel:MainViewModel/>
-    </Window.DataContext>
+
 
     <Border Background="#272537"
             MouseDown="BorderMouseDown">
@@ -30,16 +29,16 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <RadioButton Content="BioTech"
-                         VerticalAlignment="Center"
+            <Button Content="BioTech"
+                         VerticalAlignment="Top"
                          HorizontalAlignment="Left"
-                         Margin="0,0,0,0"
-                         Height="70"
+                         Height="45"
                          Foreground="White"
                          FontSize="34"
                          FontWeight="SemiBold"
-                         Style="{StaticResource MenuButtonTheme}"
-                         Command="{Binding HomeViewCommand}"/>
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Command="{Binding NavigateHomeCommand}" Width="144" Margin="33,0,0,0" BorderBrush="Black"/>
 
             <StackPanel Grid.Row="0"
                         Grid.Column="1"
@@ -84,7 +83,7 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding AllenamentiViewCommand}"/>
+                             Command="{Binding NavigateAllenamentiCommand}"/>
 
                 <RadioButton Content="Archivio alimenti"
                              Height="70"
@@ -95,13 +94,37 @@
             </StackPanel>
 
 
-            <ContentControl Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="10"
-                            Content="{Binding CurrentView}"/>
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10"
+                Content="{Binding CurrentViewModel}">
+                <ContentControl.Resources>
+                    <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                        <view:HomeView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModel:AnagraficaViewModel}">
+                        <view:AnagraficaView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModel:FitTestViewModel}">
+                        <view:FitTestView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModel:DieteViewModel}">
+                        <view:DieteView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModel:AllenamentiViewModel}">
+                        <view:AllenamentiView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type viewModel:AlimentiViewModel}">
+                        <view:AlimentiView/>
+                    </DataTemplate>
+                </ContentControl.Resources>
+            </ContentControl>
 
         </Grid>
-        
+
 
     </Border>
 </Window>

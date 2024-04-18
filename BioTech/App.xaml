@@ -2,8 +2,6 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BioTech"
-             xmlns:viewModel="clr-namespace:BioTech.MVVM.ViewModel"
-             xmlns:view="clr-namespace:BioTech.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          <ResourceDictionary>
@@ -12,30 +10,6 @@
                 <ResourceDictionary Source="Themes/AllenamentiButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/CategoriaRadioButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
-                 <view:HomeView/>
-             </DataTemplate>
-
-             <DataTemplate DataType="{x:Type viewModel:AnagraficaViewModel}">
-                 <view:AnagraficaView/>
-             </DataTemplate>
-
-             <DataTemplate DataType="{x:Type viewModel:FitTestViewModel}">
-                 <view:FitTestView/>
-             </DataTemplate>
-
-             <DataTemplate DataType="{x:Type viewModel:DieteViewModel}">
-                 <view:DieteView/>
-             </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:AllenamentiViewModel}">
-                 <view:AllenamentiView/>
-             </DataTemplate>
-
-             <DataTemplate DataType="{x:Type viewModel:AlimentiViewModel}">
-                 <view:AlimentiView/>
-             </DataTemplate>
-        </ResourceDictionary>
+         </ResourceDictionary>
     </Application.Resources>
 </Application>

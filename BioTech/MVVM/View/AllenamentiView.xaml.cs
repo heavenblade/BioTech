@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using BioTech.Core;
-using BioTech.MVVM.ViewModel;
 
 namespace BioTech.MVVM.View
 {
@@ -33,7 +32,7 @@ namespace BioTech.MVVM.View
 
         private void ButtonNuovo_Click(object sender, RoutedEventArgs e)
         {
-            AllenamentiViewModel
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
