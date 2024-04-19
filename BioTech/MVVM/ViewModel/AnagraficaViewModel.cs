@@ -1,5 +1,6 @@
 ﻿using BioTech.MVVM.Commands;
 using System.Windows.Input;
+using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.ViewModel;
 

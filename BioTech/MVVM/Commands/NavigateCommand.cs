@@ -1,4 +1,5 @@
 ﻿using BioTech.MVVM.ViewModel;
+using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.Commands;
 

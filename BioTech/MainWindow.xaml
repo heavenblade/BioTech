@@ -7,6 +7,8 @@
         xmlns:view="clr-namespace:BioTech.MVVM.View"
         xmlns:viewModel="clr-namespace:BioTech.MVVM.ViewModel"
         xmlns:commands="clr-namespace:BioTech.MVVM.Commands"
+        xmlns:allenamentiV="clr-namespace:BioTech.MVVM.View.Allenamenti"
+        xmlns:allenamentiVM="clr-namespace:BioTech.MVVM.ViewModel.Allenamenti"
         mc:Ignorable="d"
         Height="800" Width="1300"
         WindowStyle="None"
@@ -46,11 +48,13 @@
                         VerticalAlignment="Top"
                         Orientation="Horizontal">
 
-                <Button Name="ButtonMinimize" Width="55" Height="40" Content="_" FontSize="16" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+                <Button Name="ButtonMinimize" Content="_" Style="{StaticResource WindowButtonsTheme}"
                         Click="ButtonMinimizeClick" MouseEnter="ButtonMinimizeHoverOn" MouseLeave="ButtonMinimizeHoverOff"/>
-                <Button Name="ButtonMaximize" Width="55" Height="40" Content="▢" FontSize="16" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+
+                <Button Name="ButtonMaximize" Content="▢" Style="{StaticResource WindowButtonsTheme}"
                         Click="ButtonResizeClick" MouseEnter="ButtonMaximizeHoverOn" MouseLeave="ButtonMaximizeHoverOff"/>
-                <Button Name="ButtonClose" Width="55" Height="40" Content="╳" Background="Transparent" BorderThickness="0" Foreground="Gray" FontWeight="Bold"
+
+                <Button Name="ButtonClose" Content="╳" Style="{StaticResource CloseButtonTheme}"
                         Click="ButtonCloseClick" MouseEnter="ButtonCloseHoverOn" MouseLeave="ButtonCloseHoverOff"/>
 
             </StackPanel>
@@ -97,6 +101,7 @@
             <ContentControl Grid.Row="1" Grid.Column="1" Margin="10"
                 Content="{Binding CurrentViewModel}">
                 <ContentControl.Resources>
+                    <!-- Main views -->
                     <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                         <view:HomeView/>
                     </DataTemplate>
@@ -113,13 +118,23 @@
                         <view:DieteView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type viewModel:AllenamentiViewModel}">
-                        <view:AllenamentiView/>
+                    <DataTemplate DataType="{x:Type allenamentiVM:AllenamentiViewModel}">
+                        <allenamentiV:AllenamentiView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type viewModel:AlimentiViewModel}">
                         <view:AlimentiView/>
                     </DataTemplate>
+
+                    <!-- Secondary views -->
+                    <DataTemplate DataType="{x:Type allenamentiVM:NuovoAllenamentoViewModel}">
+                        <allenamentiV:NuovoAllenamentoView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type allenamentiVM:GuardaAllenamentoViewModel}">
+                        <allenamentiV:GuardaAllenamentoView/>
+                    </DataTemplate>
+
                 </ContentControl.Resources>
             </ContentControl>
 

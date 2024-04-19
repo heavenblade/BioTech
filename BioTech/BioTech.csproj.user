@@ -10,7 +10,13 @@
     <Compile Update="MVVM\View\AlimentiView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\AllenamentiView.xaml.cs">
+    <Compile Update="MVVM\View\Allenamenti\AllenamentiView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Allenamenti\NuovoAllenamentoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Allenamenti\GuardaAllenamentoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\AnagraficaView.xaml.cs">
@@ -33,7 +39,13 @@
     <Page Update="MVVM\View\AlimentiView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\AllenamentiView.xaml">
+    <Page Update="MVVM\View\Allenamenti\AllenamentiView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Allenamenti\NuovoAllenamentoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Allenamenti\GuardaAllenamentoView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\AnagraficaView.xaml">
@@ -52,6 +64,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\CategoriaRadioButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\CloseButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\WindowButtonsTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\MenuButtonTheme.xaml">

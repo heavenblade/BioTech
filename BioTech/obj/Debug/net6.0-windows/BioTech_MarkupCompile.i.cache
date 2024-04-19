@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\m.amatori\source\repos\BioTech\BioTech\App.xaml
-10529586121
+14-305201533
 
-24-937748957
+30-789296623
 205-1407963285
-MainWindow.xaml;MVVM\View\AlimentiView.xaml;MVVM\View\AllenamentiView.xaml;MVVM\View\AnagraficaView.xaml;MVVM\View\DieteView.xaml;MVVM\View\FitTestView.xaml;MVVM\View\HomeView.xaml;Themes\AllenamentiButtonTheme.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\MenuButtonTheme.xaml;
+MainWindow.xaml;MVVM\View\AlimentiView.xaml;MVVM\View\Allenamenti\AllenamentiView.xaml;MVVM\View\Allenamenti\GuardaAllenamentoView.xaml;MVVM\View\Allenamenti\NuovoAllenamentoView.xaml;MVVM\View\AnagraficaView.xaml;MVVM\View\DieteView.xaml;MVVM\View\FitTestView.xaml;MVVM\View\HomeView.xaml;Themes\AllenamentiButtonTheme.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\CloseButtonTheme.xaml;Themes\MenuButtonTheme.xaml;Themes\WindowButtonsTheme.xaml;
 
-False
+True
 

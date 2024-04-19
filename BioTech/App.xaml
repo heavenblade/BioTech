@@ -9,6 +9,8 @@
                 <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/AllenamentiButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/CategoriaRadioButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/WindowButtonsTheme.xaml"/>
+                <ResourceDictionary Source="Themes/CloseButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>

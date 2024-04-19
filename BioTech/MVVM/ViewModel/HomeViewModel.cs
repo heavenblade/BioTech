@@ -1,5 +1,7 @@
 ﻿using System.Windows.Input;
 using BioTech.MVVM.Commands;
+using BioTech.MVVM.ViewModel.Allenamenti;
+using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.ViewModel;
 
@@ -10,7 +12,6 @@ class HomeViewModel : BaseViewModel
     public object CurrentViewModel => _navigationStore.CurrentView;
 
     public ICommand NavigateHomeCommand { get; }
-    public ICommand NavigateAnagraficaCommand { get; }
     public ICommand NavigateAllenamentiCommand { get; }
 
     public HomeViewModel(NavigationStore navigationStore)
@@ -19,7 +20,6 @@ class HomeViewModel : BaseViewModel
         _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
         NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () => new(navigationStore));
-        NavigateAnagraficaCommand = new NavigateCommand<AnagraficaViewModel>(navigationStore, () => new(navigationStore));
         NavigateAllenamentiCommand = new NavigateCommand<AllenamentiViewModel>(navigationStore, () => new(navigationStore));
 
     }

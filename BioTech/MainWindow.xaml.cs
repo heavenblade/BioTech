@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using BioTech.Core;
 using BioTech.MVVM.ViewModel;
-using BioTech.MVVM;
+using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech;
 
@@ -13,7 +13,7 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        NavigationStore navigationStore = new NavigationStore();
+        var navigationStore = new NavigationStore();
 
         navigationStore.CurrentView = new HomeViewModel(navigationStore);
 
@@ -22,11 +22,6 @@ public partial class MainWindow : Window
         InitializeComponent();
 
         MongoDbClient.Initialize();
-    }
-
-    private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-    {
-        Application.Current.MainWindow = this;
     }
 
     private void BorderMouseDown(object sender, MouseButtonEventArgs e)
@@ -52,7 +47,10 @@ public partial class MainWindow : Window
 
     private void ButtonMaximizeHoverOff(object sender, RoutedEventArgs e) { }
 
-    private void ButtonCloseHoverOn(object sender, RoutedEventArgs e) { }
+    private void ButtonCloseHoverOn(object sender, RoutedEventArgs e)
+    {
+        
+    }
 
     private void ButtonCloseHoverOff(object sender, RoutedEventArgs e) { }
 
