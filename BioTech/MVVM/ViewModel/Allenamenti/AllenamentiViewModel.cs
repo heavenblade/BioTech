@@ -14,5 +14,4 @@ class AllenamentiViewModel : BaseViewModel
         NavigateNuovoAllenamentoCommand = new NavigateCommand<NuovoAllenamentoViewModel>(navigationStore, () => new(navigationStore));
         NavigateGuardaAllenamentoCommand = new NavigateCommand<GuardaAllenamentoViewModel>(navigationStore, () => new(navigationStore));
     }
-
 }

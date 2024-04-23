@@ -22,8 +22,8 @@
                      IsReadOnly="True"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
-                <Button Content="Esci" Style="{StaticResource AllenamentiButtonTheme}" Command="{Binding NavigateAllenamentiCommand}"/>
-                <Button Content="Stampa" Style="{StaticResource AllenamentiButtonTheme}" Click="StampaButton_Click"/>
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateAllenamentiCommand}"/>
+                <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

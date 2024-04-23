@@ -11,10 +11,11 @@ namespace BioTech.MVVM.View.Allenamenti
     public partial class AllenamentiView : UserControl
     {
 
+        public AllenamentiView() => InitializeComponent();
 
-        public AllenamentiView()
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+
         }
 
         private void BuildListaAllenamenti(object sender, RoutedEventArgs e)
@@ -24,20 +25,20 @@ namespace BioTech.MVVM.View.Allenamenti
 
             if (categoria == null) 
                 return;
-            
-            ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList();
+
+            LoadListaAllenamenti(categoria);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadListaAllenamenti(string categoria)
         {
-            
+            ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList();
         }
 
         private void GuardaTabella_OnClick(object sender, RoutedEventArgs e)
         {
             if (ListaAllenamenti.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Selezionare prima una tabella dalla lista!");
+                MessageBox.Show("Selezionare prima una tabella dalla lista!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 return;
             }
@@ -47,6 +48,31 @@ namespace BioTech.MVVM.View.Allenamenti
                .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
 
             AllenamentoStore.CurrentAllenamento = MongoDbClient.FindAllenamento(nome, categoria);
+        }
+
+        private void RinominaTabella_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (ListaAllenamenti.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Selezionare prima una tabella dalla lista!");
+
+                return;
+            }
+
+            var oldName = (string)ListaAllenamenti.SelectedItems[0]!;
+
+            string newName = Microsoft.VisualBasic.Interaction.InputBox("Inserire il nuovo nome per la tabella selezionata:", 
+                "Rinomina", "");
+
+            MongoDbClient.RenameAllenamento(oldName, newName);
+
+            var categoria = CategoriaFilter.Children.OfType<RadioButton>()
+               .First(r => r.IsChecked.HasValue && r.IsChecked.Value).Content.ToString();
+
+            if (categoria == null)
+                return;
+
+            LoadListaAllenamenti(categoria);
         }
     }
 }

@@ -9,6 +9,10 @@
         xmlns:commands="clr-namespace:BioTech.MVVM.Commands"
         xmlns:allenamentiV="clr-namespace:BioTech.MVVM.View.Allenamenti"
         xmlns:allenamentiVM="clr-namespace:BioTech.MVVM.ViewModel.Allenamenti"
+        xmlns:dieteV="clr-namespace:BioTech.MVVM.View.Diete"
+        xmlns:dieteVM="clr-namespace:BioTech.MVVM.ViewModel.Diete"
+        xmlns:anagraficaV="clr-namespace:BioTech.MVVM.View.Anagrafica"
+        xmlns:anagraficaVM="clr-namespace:BioTech.MVVM.ViewModel.Anagrafica"
         mc:Ignorable="d"
         Height="800" Width="1300"
         WindowStyle="None"
@@ -66,7 +70,7 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding AnagraficaViewCommand}"/>
+                             Command="{Binding NavigateAnagraficaCommand}"/>
 
                 <RadioButton Content="Fit test"
                              Height="70"
@@ -80,7 +84,7 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DieteViewCommand}"/>
+                             Command="{Binding NavigateDieteCommand}"/>
 
                 <RadioButton Content="Archivio allenamenti"
                              Height="70"
@@ -106,16 +110,16 @@
                         <view:HomeView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type viewModel:AnagraficaViewModel}">
-                        <view:AnagraficaView/>
+                    <DataTemplate DataType="{x:Type anagraficaVM:AnagraficaViewModel}">
+                        <anagraficaV:AnagraficaView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type viewModel:FitTestViewModel}">
                         <view:FitTestView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type viewModel:DieteViewModel}">
-                        <view:DieteView/>
+                    <DataTemplate DataType="{x:Type dieteVM:DieteViewModel}">
+                        <dieteV:DieteView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type allenamentiVM:AllenamentiViewModel}">
@@ -127,6 +131,8 @@
                     </DataTemplate>
 
                     <!-- Secondary views -->
+
+                    <!-- Allenamenti views -->
                     <DataTemplate DataType="{x:Type allenamentiVM:NuovoAllenamentoViewModel}">
                         <allenamentiV:NuovoAllenamentoView/>
                     </DataTemplate>
@@ -135,11 +141,19 @@
                         <allenamentiV:GuardaAllenamentoView/>
                     </DataTemplate>
 
+                    <!-- Diete views -->
+                    <DataTemplate DataType="{x:Type dieteVM:NuovaDietaViewModel}">
+                        <dieteV:NuovaDietaView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type dieteVM:GuardaDietaViewModel}">
+                        <dieteV:GuardaDietaView/>
+                    </DataTemplate>
+
                 </ContentControl.Resources>
             </ContentControl>
 
         </Grid>
-
 
     </Border>
 </Window>

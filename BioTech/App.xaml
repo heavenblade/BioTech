@@ -1,13 +1,12 @@
 ﻿<Application x:Class="BioTech.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BioTech"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          <ResourceDictionary>
              <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes/MenuButtonTheme.xaml"/>
-                <ResourceDictionary Source="Themes/AllenamentiButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/MainWindowButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/CategoriaRadioButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/WindowButtonsTheme.xaml"/>
                 <ResourceDictionary Source="Themes/CloseButtonTheme.xaml"/>
