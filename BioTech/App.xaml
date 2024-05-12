@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="Themes/CategoriaRadioButtonTheme.xaml"/>
                 <ResourceDictionary Source="Themes/WindowButtonsTheme.xaml"/>
                 <ResourceDictionary Source="Themes/CloseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes/AlternatingRowColor.xaml"/>
             </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>

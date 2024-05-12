@@ -9,8 +9,8 @@ public static partial class MongoDbClient
 
     private static IMongoCollection<Allenamento> _allenamentiColl;
     private static IMongoCollection<Dieta> _dieteColl;
+    private static IMongoCollection<Persona> _personeColl;
     private static IMongoCollection<Allenamento> _fitTestColl;
-    private static IMongoCollection<Allenamento> _personeColl;
 
     public static void Initialize()
     {
@@ -20,12 +20,11 @@ public static partial class MongoDbClient
 
         _allenamentiColl = _client.GetDatabase("biotech").GetCollection<Allenamento>("allenamenti");
         _dieteColl = _client.GetDatabase("biotech").GetCollection<Dieta>("diete");
+        _personeColl = _client.GetDatabase("biotech").GetCollection<Persona>("persone");
         _fitTestColl = _client.GetDatabase("biotech").GetCollection<Allenamento>("fittest");
-        _personeColl = _client.GetDatabase("biotech").GetCollection<Allenamento>("persone");
     }
 
     // Allenamenti
-
     public static List<Allenamento> GetAllenamentiPerCategoria(string categoria)
     {
         FilterDefinition<Allenamento> filter = Builders<Allenamento>.Filter.Eq(x => x.Categoria, categoria);
@@ -101,5 +100,34 @@ public static partial class MongoDbClient
         UpdateDefinition<Dieta> update = Builders<Dieta>.Update.Set(x => x.Nome, newName);
 
         _dieteColl.UpdateOne(filter, update);
+    }
+
+    // Persone
+    public static List<Persona> GetPersone()
+    {
+        return _personeColl.Find(FilterDefinition<Persona>.Empty).ToList();
+    }
+
+    public static bool CheckIfPersonaIsPresente(Persona persona)
+    {
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, persona.Nome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Cognome, persona.Cognome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.DataNascita, persona.DataNascita);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Città, persona.Città);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, persona.Telefono);
+
+        List<Persona>? result = _personeColl.Find(filter).ToList();
+
+        return result.Count > 0;
+    }
+
+    public static void InsertNuovaPersona(Persona persona)
+    {
+        _personeColl.InsertOne(persona);
+    }
+
+    public static void ModifyPersona(Persona persona)
+    {
+
     }
 }

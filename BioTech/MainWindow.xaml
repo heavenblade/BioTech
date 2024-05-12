@@ -8,17 +8,18 @@
         xmlns:viewModel="clr-namespace:BioTech.MVVM.ViewModel"
         xmlns:commands="clr-namespace:BioTech.MVVM.Commands"
         xmlns:allenamentiV="clr-namespace:BioTech.MVVM.View.Allenamenti"
-        xmlns:allenamentiVM="clr-namespace:BioTech.MVVM.ViewModel.Allenamenti"
+        xmlns:allenamentiVm="clr-namespace:BioTech.MVVM.ViewModel.Allenamenti"
         xmlns:dieteV="clr-namespace:BioTech.MVVM.View.Diete"
-        xmlns:dieteVM="clr-namespace:BioTech.MVVM.ViewModel.Diete"
+        xmlns:dieteVm="clr-namespace:BioTech.MVVM.ViewModel.Diete"
         xmlns:anagraficaV="clr-namespace:BioTech.MVVM.View.Anagrafica"
-        xmlns:anagraficaVM="clr-namespace:BioTech.MVVM.ViewModel.Anagrafica"
+        xmlns:anagraficaVm="clr-namespace:BioTech.MVVM.ViewModel.Anagrafica"
         mc:Ignorable="d"
-        Height="800" Width="1300"
+        Height="850" Width="1400"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        Title="Biotech">
 
 
 
@@ -44,7 +45,10 @@
                          FontWeight="SemiBold"
                          Background="Transparent"
                          BorderThickness="0"
-                         Command="{Binding NavigateHomeCommand}" Width="144" Margin="33,0,0,0" BorderBrush="Black"/>
+                         Width="144"
+                         Margin="33,0,0,0"
+                         BorderBrush="Black"
+                         Command="{Binding NavigateHomeCommand}"/>
 
             <StackPanel Grid.Row="0"
                         Grid.Column="1"
@@ -53,13 +57,13 @@
                         Orientation="Horizontal">
 
                 <Button Name="ButtonMinimize" Content="_" Style="{StaticResource WindowButtonsTheme}"
-                        Click="ButtonMinimizeClick" MouseEnter="ButtonMinimizeHoverOn" MouseLeave="ButtonMinimizeHoverOff"/>
+                        Click="ButtonMinimizeClick"/>
 
                 <Button Name="ButtonMaximize" Content="▢" Style="{StaticResource WindowButtonsTheme}"
-                        Click="ButtonResizeClick" MouseEnter="ButtonMaximizeHoverOn" MouseLeave="ButtonMaximizeHoverOff"/>
+                        Click="ButtonResizeClick"/>
 
                 <Button Name="ButtonClose" Content="╳" Style="{StaticResource CloseButtonTheme}"
-                        Click="ButtonCloseClick" MouseEnter="ButtonCloseHoverOn" MouseLeave="ButtonCloseHoverOff"/>
+                        Click="ButtonCloseClick"/>
 
             </StackPanel>
 
@@ -110,7 +114,7 @@
                         <view:HomeView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type anagraficaVM:AnagraficaViewModel}">
+                    <DataTemplate DataType="{x:Type anagraficaVm:AnagraficaViewModel}">
                         <anagraficaV:AnagraficaView/>
                     </DataTemplate>
 
@@ -118,11 +122,11 @@
                         <view:FitTestView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type dieteVM:DieteViewModel}">
+                    <DataTemplate DataType="{x:Type dieteVm:DieteViewModel}">
                         <dieteV:DieteView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type allenamentiVM:AllenamentiViewModel}">
+                    <DataTemplate DataType="{x:Type allenamentiVm:AllenamentiViewModel}">
                         <allenamentiV:AllenamentiView/>
                     </DataTemplate>
 
@@ -133,21 +137,34 @@
                     <!-- Secondary views -->
 
                     <!-- Allenamenti views -->
-                    <DataTemplate DataType="{x:Type allenamentiVM:NuovoAllenamentoViewModel}">
+                    <DataTemplate DataType="{x:Type allenamentiVm:NuovoAllenamentoViewModel}">
                         <allenamentiV:NuovoAllenamentoView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type allenamentiVM:GuardaAllenamentoViewModel}">
+                    <DataTemplate DataType="{x:Type allenamentiVm:GuardaAllenamentoViewModel}">
                         <allenamentiV:GuardaAllenamentoView/>
                     </DataTemplate>
 
                     <!-- Diete views -->
-                    <DataTemplate DataType="{x:Type dieteVM:NuovaDietaViewModel}">
+                    <DataTemplate DataType="{x:Type dieteVm:NuovaDietaViewModel}">
                         <dieteV:NuovaDietaView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type dieteVM:GuardaDietaViewModel}">
+                    <DataTemplate DataType="{x:Type dieteVm:GuardaDietaViewModel}">
                         <dieteV:GuardaDietaView/>
+                    </DataTemplate>
+
+                    <!-- Anagrafica views -->
+                    <DataTemplate DataType="{x:Type anagraficaVm:NuovaPersonaViewModel}">
+                        <anagraficaV:PersonaView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type anagraficaVm:GuardaPersonaViewModel}">
+                        <anagraficaV:PersonaView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type anagraficaVm:ModificaPersonaViewModel}">
+                        <anagraficaV:PersonaView/>
                     </DataTemplate>
 
                 </ContentControl.Resources>

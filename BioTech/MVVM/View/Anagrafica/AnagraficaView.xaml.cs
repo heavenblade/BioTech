@@ -1,16 +1,29 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using BioTech.Core;
 
-namespace BioTech.MVVM.View.Anagrafica
+namespace BioTech.MVVM.View.Anagrafica;
+
+/// <summary>
+///     Interaction logic for AnagraficaView.xaml
+/// </summary>
+public partial class AnagraficaView : UserControl
 {
-    /// <summary>
-    /// Interaction logic for AnagraficaView.xaml
-    /// </summary>
-    public partial class AnagraficaView : UserControl
+    public AnagraficaView()
     {
-        public AnagraficaView()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        BuildListaPersone();
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
 
     }
+
+    private void BuildListaPersone()
+    {
+        ListaPersone.ItemsSource = MongoDbClient.GetPersone();
+    }
+    
 }

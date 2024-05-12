@@ -62,3 +62,6 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\Vi
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Diete\NuovaDietaView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\AnagraficaView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\AnagraficaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\Themes\AlternatingRowColor.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\PersonaView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\PersonaView.g.cs

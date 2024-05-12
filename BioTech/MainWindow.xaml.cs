@@ -39,23 +39,9 @@ public partial class MainWindow : Window
     private void ButtonCloseClick(object sender, RoutedEventArgs e) => 
         Application.Current.Shutdown();
 
-    private void ButtonMinimizeHoverOn(object sender, RoutedEventArgs e) { }
-
-    private void ButtonMinimizeHoverOff(object sender, RoutedEventArgs e) { }
-
-    private void ButtonMaximizeHoverOn(object sender, RoutedEventArgs e) { }
-
-    private void ButtonMaximizeHoverOff(object sender, RoutedEventArgs e) { }
-
-    private void ButtonCloseHoverOn(object sender, RoutedEventArgs e)
-    {
-        
-    }
-
-    private void ButtonCloseHoverOff(object sender, RoutedEventArgs e) { }
-
     private void RadioButton_Checked(object sender, RoutedEventArgs e)
     {
 
     }
+
 }

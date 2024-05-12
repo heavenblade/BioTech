@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Images\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="MVVM\View\Anagrafica\PersonaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Diete\GuardaDietaView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

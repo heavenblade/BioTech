@@ -4,13 +4,17 @@ using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.ViewModel.Anagrafica;
 
-class AnagraficaViewModel : BaseViewModel
+public class AnagraficaViewModel : BaseViewModel
 {
-    public ICommand NavigateHomeCommand { get; }
+    public ICommand NavigateNuovaPersonaCommand { get; }
+    public ICommand NavigateGuardaPersonaCommand { get; }
+    public ICommand NavigateModificaPersonaCommand { get; }
 
     public AnagraficaViewModel(NavigationStore navigationStore)
     {
-        NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () => new(navigationStore));
+        NavigateNuovaPersonaCommand = new NavigateCommand<NuovaPersonaViewModel>(navigationStore, () => new(navigationStore));
+        NavigateGuardaPersonaCommand = new NavigateCommand<GuardaPersonaViewModel>(navigationStore, () => new(navigationStore));
+        NavigateModificaPersonaCommand = new NavigateCommand<ModificaPersonaViewModel>(navigationStore, () => new(navigationStore));
     }
 
 }

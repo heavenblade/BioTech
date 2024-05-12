@@ -22,7 +22,8 @@
 
         <ListView x:Name="ListaAllenamenti" 
                   FontSize="20"
-                  Margin="0,45,25,25">
+                  Margin="0,45,25,25"
+                  ItemContainerStyle="{StaticResource CustomListViewItemStyle}">
         </ListView>
 
         <StackPanel Grid.Column="1" Grid.Row="0" x:Name="CategoriaFilter" Margin="10,101,-10,75">

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\m.amatori\source\repos\BioTech\BioTech\App.xaml
-161791924502
+18609792239
 
-35579299489
+40955617875
 205-1407963285
-MainWindow.xaml;MVVM\View\AlimentiView.xaml;MVVM\View\Allenamenti\AllenamentiView.xaml;MVVM\View\Allenamenti\GuardaAllenamentoView.xaml;MVVM\View\Allenamenti\NuovoAllenamentoView.xaml;MVVM\View\Anagrafica\AnagraficaView.xaml;MVVM\View\Diete\DieteView.xaml;MVVM\View\Diete\GuardaDietaView.xaml;MVVM\View\Diete\NuovaDietaView.xaml;MVVM\View\FitTestView.xaml;MVVM\View\HomeView.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\CloseButtonTheme.xaml;Themes\MainWindowButtonTheme.xaml;Themes\MenuButtonTheme.xaml;Themes\WindowButtonsTheme.xaml;
+MainWindow.xaml;MVVM\View\AlimentiView.xaml;MVVM\View\Allenamenti\AllenamentiView.xaml;MVVM\View\Allenamenti\GuardaAllenamentoView.xaml;MVVM\View\Allenamenti\NuovoAllenamentoView.xaml;MVVM\View\Anagrafica\AnagraficaView.xaml;MVVM\View\Anagrafica\PersonaView.xaml;MVVM\View\Diete\DieteView.xaml;MVVM\View\Diete\GuardaDietaView.xaml;MVVM\View\Diete\NuovaDietaView.xaml;MVVM\View\FitTestView.xaml;MVVM\View\HomeView.xaml;Themes\AlternatingRowColor.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\CloseButtonTheme.xaml;Themes\MainWindowButtonTheme.xaml;Themes\MenuButtonTheme.xaml;Themes\WindowButtonsTheme.xaml;
 
-True
+False
 

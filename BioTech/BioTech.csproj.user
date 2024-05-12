@@ -51,6 +51,9 @@
     <Page Update="MVVM\View\Anagrafica\AnagraficaView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\Anagrafica\PersonaView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\Diete\DieteView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -64,6 +67,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\AlternatingRowColor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\MainWindowButtonTheme.xaml">
