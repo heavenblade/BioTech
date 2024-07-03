@@ -142,16 +142,20 @@
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type allenamentiVm:GuardaAllenamentoViewModel}">
-                        <allenamentiV:GuardaAllenamentoView/>
+                        <allenamentiV:TabellaReadOnlyView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type allenamentiVm:ModificaAllenamentoViewModel}">
+                        <allenamentiV:TabellaEditView/>
                     </DataTemplate>
 
                     <!-- Diete views -->
                     <DataTemplate DataType="{x:Type dieteVm:NuovaDietaViewModel}">
-                        <dieteV:NuovaDietaView/>
+                        <dieteV:DietaView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type dieteVm:GuardaDietaViewModel}">
-                        <dieteV:GuardaDietaView/>
+                        <dieteV:DietaView/>
                     </DataTemplate>
 
                     <!-- Anagrafica views -->
@@ -160,10 +164,6 @@
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type anagraficaVm:GuardaPersonaViewModel}">
-                        <anagraficaV:PersonaView/>
-                    </DataTemplate>
-
-                    <DataTemplate DataType="{x:Type anagraficaVm:ModificaPersonaViewModel}">
                         <anagraficaV:PersonaView/>
                     </DataTemplate>
 

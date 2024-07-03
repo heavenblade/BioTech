@@ -64,37 +64,37 @@
 
                     <TextBox x:Name="Nome" Width="300" HorizontalAlignment="Left" Margin="10,10, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Cognome" Width="300" HorizontalAlignment="Left" Margin="10, 5, 0,5" FontSize="26"/>
+                    <TextBox Name="Cognome" Width="300" HorizontalAlignment="Left" Margin="10, 2, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Altezza" Width="100" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Altezza" Width="100" HorizontalAlignment="Left" Margin="10,2, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Peso" Width="100" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Peso" Width="100" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26"/>
 
                     <StackPanel Orientation="Horizontal"
                                 x:Name="Sesso"
-                                Margin="10,5,0,5">
-                        <RadioButton Content="Maschio" GroupName="Sesso" Foreground="White" FontSize="26" IsChecked="True"/>
-                        <RadioButton Content="Femmina" GroupName="Sesso" Foreground="White" FontSize="26"/>
+                                Margin="10,4,0,5">
+                        <RadioButton Content="Maschio" GroupName="Sesso" Foreground="White" FontSize="26" VerticalContentAlignment="Center" IsChecked="True"/>
+                        <RadioButton Content="Femmina" GroupName="Sesso" Foreground="White" FontSize="26" VerticalContentAlignment="Center" Margin="15, 0,0,0"/>
                     </StackPanel>
 
-                    <TextBox Name="DataNascita" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <DatePicker Name="DataNascita" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Indirizzo" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Indirizzo" Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Città" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Città" Width="300" HorizontalAlignment="Left" Margin="10,3, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Professione" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Professione" Width="300" HorizontalAlignment="Left" Margin="10,2, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Sport" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Sport" Width="300" HorizontalAlignment="Left" Margin="10,3, 0,5" FontSize="26"/>
 
-                    <TextBox Name="Telefono" Width="300" HorizontalAlignment="Left" Margin="10,5, 0,5" FontSize="26"/>
+                    <TextBox Name="Telefono" Width="300" HorizontalAlignment="Left" Margin="10,3, 0,5" FontSize="26"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
-                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateAnagraficaCommand}"/>
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateAnagraficaCommand}"/>
                 <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
-                <Button Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click"/>
+                <Button Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click" Command="{Binding NavigateAnagraficaCommand}"/>
             </StackPanel>
         </StackPanel>
 

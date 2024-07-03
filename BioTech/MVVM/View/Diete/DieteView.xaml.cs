@@ -44,6 +44,7 @@ public partial class DieteView : UserControl
            .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
 
         DietaStore.CurrentDieta = MongoDbClient.FindDieta(nome, categoria);
+
     }
 
     private void RinominaDieta_OnClick(object sender, RoutedEventArgs e)

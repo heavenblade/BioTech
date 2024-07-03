@@ -4,11 +4,11 @@ using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.ViewModel.Allenamenti;
 
-public class GuardaAllenamentoViewModel : BaseViewModel
+public class ModificaAllenamentoViewModel : BaseViewModel
 {
     public ICommand NavigateAllenamentiCommand { get; }
 
-    public GuardaAllenamentoViewModel(NavigationStore navigationStore)
+    public ModificaAllenamentoViewModel(NavigationStore navigationStore)
     {
         NavigateAllenamentiCommand = new NavigateCommand<AllenamentiViewModel>(navigationStore, () => new(navigationStore));
     }

@@ -8,13 +8,11 @@ public class AnagraficaViewModel : BaseViewModel
 {
     public ICommand NavigateNuovaPersonaCommand { get; }
     public ICommand NavigateGuardaPersonaCommand { get; }
-    public ICommand NavigateModificaPersonaCommand { get; }
 
     public AnagraficaViewModel(NavigationStore navigationStore)
     {
         NavigateNuovaPersonaCommand = new NavigateCommand<NuovaPersonaViewModel>(navigationStore, () => new(navigationStore));
         NavigateGuardaPersonaCommand = new NavigateCommand<GuardaPersonaViewModel>(navigationStore, () => new(navigationStore));
-        NavigateModificaPersonaCommand = new NavigateCommand<ModificaPersonaViewModel>(navigationStore, () => new(navigationStore));
     }
 
 }

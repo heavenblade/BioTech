@@ -63,6 +63,16 @@ public static partial class MongoDbClient
         _allenamentiColl.UpdateOne(filter, update);
     }
 
+    public static void UpdateAllenamento(string nome, string categoria, string tabella)
+    {
+        FilterDefinition<Allenamento> filter = Builders<Allenamento>.Filter.Eq(x => x.Nome, nome);
+        filter &= Builders<Allenamento>.Filter.Eq(x => x.Categoria, categoria);
+
+        UpdateDefinition<Allenamento> update = Builders<Allenamento>.Update.Set(x => x.Tabella, tabella);
+
+        _allenamentiColl.UpdateOne(filter, update);
+    }
+
     // Diete
     public static List<Dieta> GetDietePerCategoria(string categoria)
     {
@@ -106,6 +116,18 @@ public static partial class MongoDbClient
     public static List<Persona> GetPersone()
     {
         return _personeColl.Find(FilterDefinition<Persona>.Empty).ToList();
+    }
+
+    public static Persona FindPersona(string nome, string cognome, string città, string telefono)
+    {
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, nome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Cognome, cognome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Città, città);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, telefono);
+
+        Persona? result = _personeColl.Find(filter).First();
+
+        return result;
     }
 
     public static bool CheckIfPersonaIsPresente(Persona persona)

@@ -7,9 +7,6 @@ public static class DietaStore
     public static Dieta CurrentDieta
     {
         get => _currentDieta;
-        set
-        {
-            _currentDieta = value;
-        }
+        set => _currentDieta = value;
     }
 }

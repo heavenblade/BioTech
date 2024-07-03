@@ -34,7 +34,7 @@ namespace BioTech.MVVM.View.Allenamenti
             ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList();
         }
 
-        private void GuardaTabella_OnClick(object sender, RoutedEventArgs e)
+        private void LoadTabella_OnClick(object sender, RoutedEventArgs e)
         {
             if (ListaAllenamenti.SelectedItems.Count == 0)
             {
@@ -43,7 +43,7 @@ namespace BioTech.MVVM.View.Allenamenti
                 return;
             }
 
-            var nome = (string)ListaAllenamenti.SelectedItems[0]!;
+            var nome = (string)ListaAllenamenti.SelectedItem;
             var categoria = CategoriaFilter.Children.OfType<RadioButton>()
                .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
 

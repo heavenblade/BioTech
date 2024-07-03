@@ -16,7 +16,7 @@
     <Compile Update="MVVM\View\Allenamenti\NuovoAllenamentoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Allenamenti\GuardaAllenamentoView.xaml.cs">
+    <Compile Update="MVVM\View\Allenamenti\TabellaReadOnlyView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\Anagrafica\AnagraficaView.xaml.cs">
@@ -45,7 +45,10 @@
     <Page Update="MVVM\View\Allenamenti\NuovoAllenamentoView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\Allenamenti\GuardaAllenamentoView.xaml">
+    <Page Update="MVVM\View\Allenamenti\TabellaEditView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Allenamenti\TabellaReadOnlyView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Anagrafica\AnagraficaView.xaml">
@@ -55,12 +58,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Diete\DieteView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\Diete\GuardaDietaView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\Diete\NuovaDietaView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\FitTestView.xaml">

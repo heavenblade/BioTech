@@ -7,9 +7,6 @@ public static class AllenamentoStore
     public static Allenamento CurrentAllenamento
     {
         get => _currentAllenamento;
-        set
-        {
-            _currentAllenamento = value;
-        }
+        set => _currentAllenamento = value;
     }
 }

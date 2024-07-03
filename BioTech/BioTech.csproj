@@ -17,13 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="MVVM\View\Allenamenti\TabellaEditView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Anagrafica\PersonaView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\Diete\GuardaDietaView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\Diete\NuovaDietaView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
