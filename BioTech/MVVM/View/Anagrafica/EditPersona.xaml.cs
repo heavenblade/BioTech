@@ -9,9 +9,9 @@ namespace BioTech.MVVM.View.Anagrafica;
 /// <summary>
 ///     Interaction logic for GuardaAllenamentoView.xaml
 /// </summary>
-public partial class PersonaView : UserControl
+public partial class EditPersona : UserControl
 {
-    public PersonaView()
+    public EditPersona()
     {
         InitializeComponent();
 
@@ -45,7 +45,7 @@ public partial class PersonaView : UserControl
 
     private void SalvaButton_Click(object sender, RoutedEventArgs e)
     {
-        var nuovaPersona = new Persona
+        Persona persona = new()
         {
             Nome = Nome.Text,
             Cognome = Cognome.Text,
@@ -61,27 +61,54 @@ public partial class PersonaView : UserControl
             Telefono = Telefono.Text
         };
 
-        if (MongoDbClient.CheckIfPersonaIsPresente(nuovaPersona))
+        if (BaseDataChanged(PersonaStore.CurrentPersona, persona))
         {
-            MessageBox.Show("È già presente nel database una persona con queste generalità.\nModificare e riprovare!");
+            try
+            {
+                MongoDbClient.InsertNuovaPersona(persona);
 
-            return;
+                MongoDbClient.DeletePersona(PersonaStore.CurrentPersona);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante l'aggiornamento!");
+
+                return;
+            }
         }
-
-        try
+        else
         {
-            MongoDbClient.InsertNuovaPersona(nuovaPersona);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Errore durante l'inserimento!");
+            try
+            {
+                MongoDbClient.UpdatePersona(persona);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante l'aggiornamento!");
 
-            return;
+                return;
+            }
         }
 
         MessageBox.Show("Persona salvata con successo!");
 
         return;
+    }
+
+    private bool BaseDataChanged(Persona saved, Persona current)
+    {
+        if (!saved.Nome.Equals(current.Nome))
+            return true;
+        if (!saved.Cognome.Equals(current.Cognome))
+            return true;
+        if (!saved.DataNascita.Equals(current.DataNascita))
+            return true;
+        if (!saved.Città.Equals(current.Città))
+            return true;
+        if (!saved.Telefono.Equals(current.Telefono))
+            return true;
+
+        return false;
     }
 
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)

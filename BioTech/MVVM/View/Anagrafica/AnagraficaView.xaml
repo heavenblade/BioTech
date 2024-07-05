@@ -35,8 +35,9 @@
         <StackPanel Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovaPersonaCommand}"/>
-                <Button Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaPersonaCommand}" Click="GuardaPersona_OnClick"/>
-                <Button Content="Cerca" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
+                <Button Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateEditPersonaCommand}" Click="GuardaPersona_OnClick"/>
+                <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
+                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
             </StackPanel>
         </StackPanel>
     </Grid>

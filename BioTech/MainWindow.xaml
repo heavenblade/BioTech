@@ -160,11 +160,11 @@
 
                     <!-- Anagrafica views -->
                     <DataTemplate DataType="{x:Type anagraficaVm:NuovaPersonaViewModel}">
-                        <anagraficaV:PersonaView/>
+                        <anagraficaV:NuovaPersona/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type anagraficaVm:GuardaPersonaViewModel}">
-                        <anagraficaV:PersonaView/>
+                    <DataTemplate DataType="{x:Type anagraficaVm:EditPersonaViewModel}">
+                        <anagraficaV:EditPersona/>
                     </DataTemplate>
 
                 </ContentControl.Resources>

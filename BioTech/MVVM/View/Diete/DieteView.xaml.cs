@@ -25,10 +25,11 @@ public partial class DieteView : UserControl
         LoadListaDiete(categoria);
     }
 
-    private void LoadListaDiete(string categoria)
-    {
+    private void LoadListaDiete(string categoria) =>
         ListaDiete.ItemsSource = MongoDbClient.GetDietePerCategoria(categoria).Select(x => x.Nome).ToList();
-    }
+
+    private void LoadListaDieteWithFilter(string categoria, string ricerca) =>
+        ListaDiete.ItemsSource = MongoDbClient.GetDietePerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
 
     private void GuardaDieta_OnClick(object sender, RoutedEventArgs e)
     {
@@ -70,5 +71,32 @@ public partial class DieteView : UserControl
             return;
 
         LoadListaDiete(categoria);
+    }
+
+    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
+    {
+        var categoria = CategoriaFilter.Children.OfType<RadioButton>()
+           .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
+
+        Ricerca.Text = "";
+
+        LoadListaDiete(categoria);
+    }
+
+    private void Ricerca_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        var categoria = CategoriaFilter.Children.OfType<RadioButton>()
+           .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
+
+        string ricerca = Ricerca.Text;
+
+        if (ricerca.Length == 0)
+        {
+            LoadListaDiete(categoria);
+
+            return;
+        }
+
+        LoadListaDieteWithFilter(categoria, ricerca.ToLower());
     }
 }

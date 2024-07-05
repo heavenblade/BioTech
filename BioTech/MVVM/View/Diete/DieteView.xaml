@@ -38,7 +38,8 @@
                 <Button Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaDietaCommand}" Click="GuardaDieta_OnClick"/>
                 <Button Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
                 <Button Content="Rinomina" Style="{StaticResource MainWindowButtonTheme}" Click="RinominaDieta_OnClick"/>
-                <Button Content="Cerca" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
+                <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
+                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
             </StackPanel>
         </StackPanel>
     </Grid>

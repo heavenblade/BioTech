@@ -57,11 +57,13 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\Themes\
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\AnagraficaView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\AnagraficaView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\Themes\AlternatingRowColor.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\PersonaView.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\PersonaView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Diete\DietaView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Diete\DietaView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\TabellaEditView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\TabellaReadOnlyView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\TabellaEditView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\TabellaReadOnlyView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\EditPersona.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\NuovaPersona.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\EditPersona.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\NuovaPersona.g.cs

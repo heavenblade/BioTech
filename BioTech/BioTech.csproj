@@ -20,7 +20,10 @@
     <Compile Update="MVVM\View\Allenamenti\TabellaEditView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Anagrafica\PersonaView.xaml.cs">
+    <Compile Update="MVVM\View\Anagrafica\EditPersona.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Anagrafica\NuovaPersona.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

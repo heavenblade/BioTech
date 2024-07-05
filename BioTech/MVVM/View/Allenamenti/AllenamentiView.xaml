@@ -44,8 +44,9 @@
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovoAllenamentoCommand}"/>
                 <Button Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
-                <Button Content="Cerca" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
                 <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
+                <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
+                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
             </StackPanel>
         </StackPanel>
 

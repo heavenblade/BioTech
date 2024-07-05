@@ -42,8 +42,23 @@ public partial class AnagraficaView : UserControl
         PersonaStore.CurrentPersona = MongoDbClient.FindPersona(nome, cognome, città, telefono);
     }
     
-    private void Button_Click(object sender, RoutedEventArgs e)
+    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
     {
+        Ricerca.Text = "";
+        ListaPersone.ItemsSource = MongoDbClient.GetPersone();
+    }
 
+    private void Ricerca_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        string ricerca = Ricerca.Text;
+
+        if (ricerca.Length == 0)
+        {
+            ListaPersone.ItemsSource = MongoDbClient.GetPersone();
+
+            return;
+        }
+
+        ListaPersone.ItemsSource = MongoDbClient.GetPersoneWithFilter(ricerca.ToLower());
     }
 }

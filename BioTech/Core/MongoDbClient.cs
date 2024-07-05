@@ -32,6 +32,15 @@ public static partial class MongoDbClient
         return _allenamentiColl.Find(filter).ToList();
     }
 
+    public static List<Allenamento> GetAllenamentiPerCategoriaWithFilter(string categoria, string ricerca)
+    {
+        FilterDefinition<Allenamento> filter = Builders<Allenamento>.Filter.And(
+            Builders<Allenamento>.Filter.Eq(x => x.Categoria, categoria),
+            Builders<Allenamento>.Filter.Where(x => x.Nome.ToLower().Contains(ricerca)));
+
+        return _allenamentiColl.Find(filter).ToList();
+    }
+
     public static bool CheckIfAllenamentoIsPresentByName(string name)
     {
         FilterDefinition<Allenamento> filter = Builders<Allenamento>.Filter.Eq(x => x.Nome, name);
@@ -77,6 +86,15 @@ public static partial class MongoDbClient
     public static List<Dieta> GetDietePerCategoria(string categoria)
     {
         FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.Eq(x => x.Categoria, categoria);
+
+        return _dieteColl.Find(filter).ToList();
+    }
+
+    public static List<Dieta> GetDietePerCategoriaWithFilter(string categoria, string ricerca)
+    {
+        FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.And(
+            Builders<Dieta>.Filter.Eq(x => x.Categoria, categoria),
+            Builders<Dieta>.Filter.Where(x => x.Nome.ToLower().Contains(ricerca)));
 
         return _dieteColl.Find(filter).ToList();
     }
@@ -130,6 +148,16 @@ public static partial class MongoDbClient
         return result;
     }
 
+    public static List<Persona> GetPersoneWithFilter(string ricerca)
+    {
+        FilterDefinition<Persona>? filter = Builders<Persona>.Filter.Or(
+            Builders<Persona>.Filter.Where(x => x.Nome.ToLower().Contains(ricerca)),
+            Builders<Persona>.Filter.Where(x => x.Cognome.ToLower().Contains(ricerca)),
+            Builders<Persona>.Filter.Where(x => x.Città.ToLower().Contains(ricerca)));
+
+        return _personeColl.Find(filter).ToList();
+    }
+
     public static bool CheckIfPersonaIsPresente(Persona persona)
     {
         FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, persona.Nome);
@@ -148,8 +176,32 @@ public static partial class MongoDbClient
         _personeColl.InsertOne(persona);
     }
 
-    public static void ModifyPersona(Persona persona)
+    public static void UpdatePersona(Persona persona)
     {
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, persona.Nome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Cognome, persona.Cognome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.DataNascita, persona.DataNascita);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Città, persona.Città);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, persona.Telefono);
 
+        UpdateDefinition<Persona> update = Builders<Persona>.Update.Set(x => x.Altezza, persona.Altezza)
+           .Set(x => x.Peso, persona.Peso)
+           .Set(x => x.Sesso, persona.Sesso)
+           .Set(x => x.Indirizzo, persona.Indirizzo)
+           .Set(x => x.Professione, persona.Professione)
+           .Set(x => x.Sport, persona.Sport);
+
+        _personeColl.UpdateOne(filter, update);
+    }
+
+    public static void DeletePersona(Persona persona)
+    {
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, persona.Nome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Cognome, persona.Cognome);
+        filter &= Builders<Persona>.Filter.Eq(x => x.DataNascita, persona.DataNascita);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Città, persona.Città);
+        filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, persona.Telefono);
+
+        _personeColl.DeleteOne(filter);
     }
 }
