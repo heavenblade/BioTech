@@ -31,15 +31,13 @@ public partial class DieteView : UserControl
     private void LoadListaDieteWithFilter(string categoria, string ricerca) =>
         ListaDiete.ItemsSource = MongoDbClient.GetDietePerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
 
+    private void OnSelectedDieta(object sender, RoutedEventArgs e)
+    {
+        ButtonGuarda.IsEnabled = true;
+    }
+
     private void GuardaDieta_OnClick(object sender, RoutedEventArgs e)
     {
-        if (ListaDiete.SelectedItems.Count == 0)
-        {
-            MessageBox.Show("Selezionare prima una dieta dalla lista!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            return;
-        }
-
         var nome = (string)ListaDiete.SelectedItems[0]!;
         var categoria = CategoriaFilter.Children.OfType<RadioButton>()
            .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();

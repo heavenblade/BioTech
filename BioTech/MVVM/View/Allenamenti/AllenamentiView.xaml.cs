@@ -32,15 +32,14 @@ public partial class AllenamentiView : UserControl
     private void LoadListaAllenamentiWithFilter(string categoria, string ricerca) =>
         ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
 
+    private void OnSelectedAllenamento(object sender, RoutedEventArgs e)
+    {
+        ButtonGuarda.IsEnabled = true;
+        ButtonModifica.IsEnabled = true;
+    }
+
     private void LoadTabella_OnClick(object sender, RoutedEventArgs e)
     {
-        if (ListaAllenamenti.SelectedItems.Count == 0)
-        {
-            MessageBox.Show("Selezionare prima una tabella dalla lista!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            return;
-        }
-
         var nome = (string)ListaAllenamenti.SelectedItem;
 
         var categoria = CategoriaFilter.Children.OfType<RadioButton>()

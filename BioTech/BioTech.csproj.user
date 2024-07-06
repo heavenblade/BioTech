@@ -25,7 +25,7 @@
     <Compile Update="MVVM\View\Diete\DieteView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\FitTestView.xaml.cs">
+    <Compile Update="MVVM\View\FitTest\FitTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\HomeView.xaml.cs">
@@ -63,7 +63,13 @@
     <Page Update="MVVM\View\Diete\DieteView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\FitTestView.xaml">
+    <Page Update="MVVM\View\FitTest\FitTestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\FitTest\GuardaFitTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\FitTest\NuovoFitTest.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\HomeView.xaml">

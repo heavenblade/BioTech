@@ -13,6 +13,8 @@
         xmlns:dieteVm="clr-namespace:BioTech.MVVM.ViewModel.Diete"
         xmlns:anagraficaV="clr-namespace:BioTech.MVVM.View.Anagrafica"
         xmlns:anagraficaVm="clr-namespace:BioTech.MVVM.ViewModel.Anagrafica"
+        xmlns:fitTestV="clr-namespace:BioTech.MVVM.View.FitTest"
+        xmlns:fitTestVm="clr-namespace:BioTech.MVVM.ViewModel.FitTest"
         mc:Ignorable="d"
         Height="850" Width="1400"
         WindowStyle="None"
@@ -81,7 +83,7 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding FitTestViewCommand}"/>
+                             Command="{Binding NavigateFitTestCommand}"/>
 
                 <RadioButton Content="Archivio diete"
                              Height="70"
@@ -118,8 +120,8 @@
                         <anagraficaV:AnagraficaView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type viewModel:FitTestViewModel}">
-                        <view:FitTestView/>
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestViewModel}">
+                        <fitTestV:FitTestView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type dieteVm:DieteViewModel}">
@@ -165,6 +167,15 @@
 
                     <DataTemplate DataType="{x:Type anagraficaVm:EditPersonaViewModel}">
                         <anagraficaV:EditPersona/>
+                    </DataTemplate>
+
+                    <!-- FitTest views -->
+                    <DataTemplate DataType="{x:Type fitTestVm:NuovoFitTestViewModel}">
+                        <fitTestV:NuovoFitTest/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type fitTestVm:GuardaFitTestViewModel}">
+                        <fitTestV:GuardaFitTest/>
                     </DataTemplate>
 
                 </ContentControl.Resources>

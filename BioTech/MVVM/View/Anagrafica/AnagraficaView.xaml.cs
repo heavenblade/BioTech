@@ -18,20 +18,16 @@ public partial class AnagraficaView : UserControl
         BuildListaPersone();
     }
 
-    private void BuildListaPersone()
-    {
+    private void BuildListaPersone() =>
         ListaPersone.ItemsSource = MongoDbClient.GetPersone();
+
+    private void OnSelectedPersona(object sender, RoutedEventArgs e)
+    {
+        ButtonGuarda.IsEnabled = true;
     }
 
     private void GuardaPersona_OnClick(object sender, RoutedEventArgs e)
     {
-        if (ListaPersone.SelectedItems.Count == 0)
-        {
-            MessageBox.Show("Selezionare prima una persona dalla lista!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            return;
-        }
-
         var selectedPersona = ListaPersone.SelectedItem as Persona;
 
         string nome = selectedPersona!.Nome;
@@ -41,12 +37,6 @@ public partial class AnagraficaView : UserControl
 
         PersonaStore.CurrentPersona = MongoDbClient.FindPersona(nome, cognome, città, telefono);
     }
-    
-    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
-    {
-        Ricerca.Text = "";
-        ListaPersone.ItemsSource = MongoDbClient.GetPersone();
-    }
 
     private void Ricerca_TextChanged(object sender, TextChangedEventArgs e)
     {
@@ -54,11 +44,17 @@ public partial class AnagraficaView : UserControl
 
         if (ricerca.Length == 0)
         {
-            ListaPersone.ItemsSource = MongoDbClient.GetPersone();
+            BuildListaPersone();
 
             return;
         }
 
         ListaPersone.ItemsSource = MongoDbClient.GetPersoneWithFilter(ricerca.ToLower());
+    }
+
+    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
+    {
+        Ricerca.Text = "";
+        BuildListaPersone();
     }
 }

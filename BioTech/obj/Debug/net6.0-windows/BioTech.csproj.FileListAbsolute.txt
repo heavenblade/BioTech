@@ -39,10 +39,8 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech.csproj.CopyComplete
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech.sourcelink.json
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\AlimentiView.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTestView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\AlimentiView.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTestView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\Themes\CategoriaRadioButtonTheme.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\AllenamentiView.g.cs
@@ -67,3 +65,9 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\Vi
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\NuovaPersona.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\EditPersona.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\NuovaPersona.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\GuardaFitTest.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTest.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\GuardaFitTest.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTest.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestView.baml

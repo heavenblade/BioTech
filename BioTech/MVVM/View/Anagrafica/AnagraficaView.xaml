@@ -20,7 +20,8 @@
                   HorizontalAlignment="Stretch"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"  
                   Width="1000"
-                  ItemContainerStyle="{StaticResource CustomListViewItemStyle}">
+                  ItemContainerStyle="{StaticResource CustomListViewItemStyle}"
+                  SelectionChanged="OnSelectedPersona">
 
             <ListView.View>
                 <GridView>
@@ -35,7 +36,7 @@
         <StackPanel Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovaPersonaCommand}"/>
-                <Button Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateEditPersonaCommand}" Click="GuardaPersona_OnClick"/>
+                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateEditPersonaCommand}" Click="GuardaPersona_OnClick" IsEnabled="False"/>
                 <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
                 <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
             </StackPanel>

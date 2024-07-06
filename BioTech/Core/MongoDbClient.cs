@@ -10,7 +10,7 @@ public static partial class MongoDbClient
     private static IMongoCollection<Allenamento> _allenamentiColl;
     private static IMongoCollection<Dieta> _dieteColl;
     private static IMongoCollection<Persona> _personeColl;
-    private static IMongoCollection<Allenamento> _fitTestColl;
+    private static IMongoCollection<FitTest> _fitTestColl;
 
     public static void Initialize()
     {
@@ -21,7 +21,7 @@ public static partial class MongoDbClient
         _allenamentiColl = _client.GetDatabase("biotech").GetCollection<Allenamento>("allenamenti");
         _dieteColl = _client.GetDatabase("biotech").GetCollection<Dieta>("diete");
         _personeColl = _client.GetDatabase("biotech").GetCollection<Persona>("persone");
-        _fitTestColl = _client.GetDatabase("biotech").GetCollection<Allenamento>("fittest");
+        _fitTestColl = _client.GetDatabase("biotech").GetCollection<FitTest>("fittest");
     }
 
     // Allenamenti
@@ -203,5 +203,11 @@ public static partial class MongoDbClient
         filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, persona.Telefono);
 
         _personeColl.DeleteOne(filter);
+    }
+
+    // FitTest
+    public static List<FitTest> GetFitTest()
+    {
+        return _fitTestColl.Find(FilterDefinition<FitTest>.Empty).ToList();
     }
 }

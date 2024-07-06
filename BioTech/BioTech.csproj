@@ -26,6 +26,12 @@
     <Compile Update="MVVM\View\Anagrafica\NuovaPersona.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\FitTest\GuardaFitTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\FitTest\NuovoFitTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

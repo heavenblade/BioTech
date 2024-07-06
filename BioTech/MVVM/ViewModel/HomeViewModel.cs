@@ -3,6 +3,7 @@ using BioTech.MVVM.Commands;
 using BioTech.MVVM.ViewModel.Allenamenti;
 using BioTech.MVVM.ViewModel.Anagrafica;
 using BioTech.MVVM.ViewModel.Diete;
+using BioTech.MVVM.ViewModel.FitTest;
 using BioTech.MVVM.ViewModel.Navigation;
 
 namespace BioTech.MVVM.ViewModel;
@@ -17,6 +18,7 @@ class HomeViewModel : BaseViewModel
     public ICommand NavigateAllenamentiCommand { get; }
     public ICommand NavigateDieteCommand { get; }
     public ICommand NavigateAnagraficaCommand { get; }
+    public ICommand NavigateFitTestCommand { get; }
 
     public HomeViewModel(NavigationStore navigationStore)
     {
@@ -27,6 +29,7 @@ class HomeViewModel : BaseViewModel
         NavigateAllenamentiCommand = new NavigateCommand<AllenamentiViewModel>(navigationStore, () => new(navigationStore));
         NavigateDieteCommand = new NavigateCommand<DieteViewModel>(navigationStore, () => new(navigationStore));
         NavigateAnagraficaCommand = new NavigateCommand<AnagraficaViewModel>(navigationStore, () => new(navigationStore));
+        NavigateFitTestCommand = new NavigateCommand<FitTestViewModel>(navigationStore, () => new(navigationStore));
 
     }
 

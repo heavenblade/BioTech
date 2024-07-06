@@ -5,6 +5,9 @@ namespace BioTech.MVVM.Model;
 [BsonIgnoreExtraElements]
 public class Persona
 {
+    [BsonElement("persRefId")]
+    public string RefId { get; set; }
+
     [BsonElement("nome")]
     public string Nome { get; set; }
 
