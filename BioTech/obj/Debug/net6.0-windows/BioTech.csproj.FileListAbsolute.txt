@@ -38,9 +38,7 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\bin\Debug\net6.0-windows\runtime
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech.csproj.AssemblyReference.cache
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech.csproj.CopyComplete
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech.sourcelink.json
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\AlimentiView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\AlimentiView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\Themes\CategoriaRadioButtonTheme.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Allenamenti\AllenamentiView.g.cs
@@ -66,17 +64,9 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\Vi
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\EditPersona.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Anagrafica\NuovaPersona.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\GuardaFitTest.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTest.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\GuardaFitTest.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTest.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestView.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\ModificaFitTest.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTestPliche.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\ModificaFitTest.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\NuovoFitTestPliche.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\ModificaFitTestPliche.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\ModificaFitTestPliche.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestCirconferenze.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestGeneralità.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestSummary.baml
@@ -84,3 +74,6 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\Vi
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestGeneralità.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestSummary.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Alimenti\AlimentiView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestPliche.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestPliche.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Alimenti\AlimentiView.baml

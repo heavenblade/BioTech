@@ -6,12 +6,12 @@ namespace BioTech.MVVM.ViewModel.FitTest;
 
 public class FitTestSummaryViewModel : BaseViewModel
 {
-    public ICommand NavigateFitTestCommand { get; }
     public ICommand NavigateFitTestCirconferenzeCommand { get; }
+    public ICommand NavigateFitTestCommand { get; }
 
     public FitTestSummaryViewModel(NavigationStore navigationStore)
     {
-        NavigateFitTestCommand = new NavigateCommand<FitTestViewModel>(navigationStore, () => new(navigationStore));
         NavigateFitTestCirconferenzeCommand = new NavigateCommand<FitTestCirconferenzeViewModel>(navigationStore, () => new(navigationStore));
+        NavigateFitTestCommand = new NavigateCommand<FitTestViewModel>(navigationStore, () => new(navigationStore));
     }
 }

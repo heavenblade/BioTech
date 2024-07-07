@@ -2,9 +2,9 @@
 
 public static class PersonaStore
 {
-    private static Persona _currentPersona;
+    private static Persona? _currentPersona;
 
-    public static Persona CurrentPersona
+    public static Persona? CurrentPersona
     {
         get => _currentPersona;
         set => _currentPersona = value;

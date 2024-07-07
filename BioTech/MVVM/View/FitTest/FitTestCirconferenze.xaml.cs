@@ -1,4 +1,8 @@
-﻿using System.Windows.Controls;
+﻿using BioTech.MVVM.Model;
+using BioTech.MVVM.Model.Stores;
+using System.Windows;
+using System.Windows.Controls;
+using BioTech.Core;
 
 namespace BioTech.MVVM.View.FitTest;
 
@@ -10,5 +14,50 @@ public partial class FitTestCirconferenze : UserControl
     public FitTestCirconferenze()
     {
         InitializeComponent();
+
+        PrepareContent();
+    }
+
+    private void PrepareContent()
+    {
+        var fitTest = FitTestStore.CurrentFitTest;
+
+        if (fitTest?.Circonferenze == null)
+            return;
+
+        Braccio.Text = fitTest.Circonferenze.Braccio.ToString();
+        Spalle.Text = fitTest.Circonferenze.Spalle.ToString();
+        Torace.Text = fitTest.Circonferenze.Torace.ToString();
+        Vita.Text = fitTest.Circonferenze.Vita.ToString();
+        Fianchi.Text = fitTest.Circonferenze.Fianchi.ToString();
+        Gamba.Text = fitTest.Circonferenze.Gamba.ToString();
+    }
+
+    private void Indietro_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Finalizza_Click(object sender, RoutedEventArgs e)
+    {
+        Circonferenze circonferenze = new()
+        {
+            Braccio = double.Parse(Braccio.Text),
+            Spalle = double.Parse(Spalle.Text),
+            Torace = double.Parse(Torace.Text),
+            Vita = double.Parse(Vita.Text),
+            Fianchi = double.Parse(Fianchi.Text),
+            Gamba = double.Parse(Gamba.Text)
+        };
+
+        FitTestStore.CurrentFitTest!.Circonferenze = circonferenze;
+
+        MongoDbClient.InsertFitTest(FitTestStore.CurrentFitTest);
+    }
+
+    private void CleanAndExit_Click(object sender, RoutedEventArgs e)
+    {
+        PersonaStore.CurrentPersona = null;
+        FitTestStore.CurrentFitTest = null;
     }
 }

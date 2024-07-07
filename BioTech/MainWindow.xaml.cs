@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using BioTech.Core;
+using BioTech.MVVM.Model.Stores;
 using BioTech.MVVM.ViewModel;
 using BioTech.MVVM.ViewModel.Navigation;
 
@@ -38,6 +39,14 @@ public partial class MainWindow : Window
 
     private void ButtonCloseClick(object sender, RoutedEventArgs e) => 
         Application.Current.Shutdown();
+
+    private void ChangeTab_Click(object sender, RoutedEventArgs e)
+    {
+        PersonaStore.CurrentPersona = null;
+        FitTestStore.CurrentFitTest = null;
+        AllenamentoStore.CurrentAllenamento = null;
+        DietaStore.CurrentDieta = null;
+    }
 
     private void RadioButton_Checked(object sender, RoutedEventArgs e)
     {

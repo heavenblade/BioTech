@@ -78,35 +78,40 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NavigateAnagraficaCommand}"/>
+                             Command="{Binding NavigateAnagraficaCommand}"
+                             Click="ChangeTab_Click"/>
 
                 <RadioButton Content="Fit test"
                              Height="70"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NavigateFitTestCommand}"/>
+                             Command="{Binding NavigateFitTestCommand}"
+                             Click="ChangeTab_Click"/>
 
                 <RadioButton Content="Archivio allenamenti"
                              Height="70"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NavigateAllenamentiCommand}"/>
+                             Command="{Binding NavigateAllenamentiCommand}"
+                             Click="ChangeTab_Click"/>
 
                 <RadioButton Content="Archivio diete"
                              Height="70"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NavigateDieteCommand}"/>
+                             Command="{Binding NavigateDieteCommand}"
+                             Click="ChangeTab_Click"/>
 
                 <RadioButton Content="Archivio alimenti"
                              Height="70"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding AlimentiViewCommand}"/>
+                             Command="{Binding AlimentiViewCommand}"
+                             Click="ChangeTab_Click"/>
             </StackPanel>
 
 
@@ -172,6 +177,10 @@
                     </DataTemplate>
 
                     <!-- FitTest views -->
+                    <DataTemplate DataType="{x:Type fitTestVm:GuardaFitTestViewModel}">
+                        <fitTestV:GuardaFitTest/>
+                    </DataTemplate>
+
                     <DataTemplate DataType="{x:Type fitTestVm:FitTestGeneralitàViewModel}">
                         <fitTestV:FitTestGeneralità/>
                     </DataTemplate>

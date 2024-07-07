@@ -2,9 +2,9 @@
 
 public static class FitTestStore
 {
-    private static FitTest _currentFitTest;
+    private static FitTest? _currentFitTest;
 
-    public static FitTest CurrentFitTest
+    public static FitTest? CurrentFitTest
     {
         get => _currentFitTest;
         set => _currentFitTest = value;

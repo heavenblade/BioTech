@@ -8,7 +8,57 @@
     <Grid>
 
         <StackPanel>
-            <TextBlock Foreground="White">Circonferenze</TextBlock>
+            <TextBlock Margin="10,10,0,0"
+    FontSize="34"
+    Foreground="White">Circonferenze muscolari</TextBlock>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Margin="10, 20, 0,0"
+                        FontSize="26"
+                        Foreground="White">Braccio</TextBlock>
+
+                    <TextBlock Margin="10, 15, 0,0"
+                        FontSize="26"
+                        Foreground="White">Spalle</TextBlock>
+
+                    <TextBlock Margin="10, 15, 0,0"
+                        FontSize="26"
+                        Foreground="White">Torace</TextBlock>
+
+                    <TextBlock Margin="10, 15, 0,0"
+                        FontSize="26"
+                        Foreground="White">Vita</TextBlock>
+
+                    <TextBlock Margin="10, 15, 0,0"
+                        FontSize="26"
+                        Foreground="White">Fianchi</TextBlock>
+
+                    <TextBlock Margin="10, 15, 0,0"
+                        FontSize="26"
+                        Foreground="White">Gamba</TextBlock>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBox x:Name="Braccio" Width="300" HorizontalAlignment="Left" Margin="10,20, 0,5" FontSize="26"/>
+
+                    <TextBox x:Name="Spalle" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+
+                    <TextBox x:Name="Torace" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+
+                    <TextBox x:Name="Vita" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+
+                    <TextBox x:Name="Fianchi" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+
+                    <TextBox x:Name="Gamba" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
+                <Button Content="Indietro" Style="{StaticResource MainWindowButtonTheme}" Click="Indietro_Click" Command="{Binding NavigateFitTestPlicheCommand}"/>
+                <Button Content="Finalizza" Style="{StaticResource MainWindowButtonTheme}" Click="Finalizza_Click" Command="{Binding NavigateFitTestSummaryCommand}"/>
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
+            </StackPanel>
         </StackPanel>
 
     </Grid>
