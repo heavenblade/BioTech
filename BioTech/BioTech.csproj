@@ -26,10 +26,16 @@
     <Compile Update="MVVM\View\Anagrafica\NuovaPersona.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\FitTest\GuardaFitTest.xaml.cs">
+    <Compile Update="MVVM\View\FitTest\FitTestSummary.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\FitTest\NuovoFitTest.xaml.cs">
+    <Compile Update="MVVM\View\FitTest\FitTestCirconferenze.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\FitTest\FitTestPliche.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\FitTest\FitTestGeneralità.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

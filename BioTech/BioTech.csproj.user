@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="MVVM\View\AlimentiView.xaml.cs">
+    <Compile Update="MVVM\View\Alimenti\AlimentiView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\Allenamenti\AllenamentiView.xaml.cs">
@@ -36,7 +36,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\AlimentiView.xaml">
+    <Page Update="MVVM\View\Alimenti\AlimentiView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\Allenamenti\AllenamentiView.xaml">
@@ -63,13 +63,19 @@
     <Page Update="MVVM\View\Diete\DieteView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\FitTest\FitTestSummary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\FitTest\FitTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\FitTest\GuardaFitTest.xaml">
+    <Page Update="MVVM\View\FitTest\FitTestCirconferenze.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\FitTest\NuovoFitTest.xaml">
+    <Page Update="MVVM\View\FitTest\FitTestPliche.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\FitTest\FitTestGeneralità.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\HomeView.xaml">

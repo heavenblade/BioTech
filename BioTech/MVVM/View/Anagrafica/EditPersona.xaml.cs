@@ -29,7 +29,6 @@ public partial class EditPersona : UserControl
         Cognome.Text = persona.Cognome;
         Altezza.Text = persona.Altezza.ToString();
         Peso.Text = persona.Peso.ToString();
-
         DataNascita.Text = persona.DataNascita;
         Indirizzo.Text = persona.Indirizzo;
         Città.Text = persona.Città;

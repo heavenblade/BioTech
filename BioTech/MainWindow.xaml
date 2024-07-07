@@ -15,6 +15,8 @@
         xmlns:anagraficaVm="clr-namespace:BioTech.MVVM.ViewModel.Anagrafica"
         xmlns:fitTestV="clr-namespace:BioTech.MVVM.View.FitTest"
         xmlns:fitTestVm="clr-namespace:BioTech.MVVM.ViewModel.FitTest"
+        xmlns:alimentiV="clr-namespace:BioTech.MVVM.View.Alimenti"
+        xmlns:alimentiVm="clr-namespace:BioTech.MVVM.ViewModel.Alimenti"
         mc:Ignorable="d"
         Height="850" Width="1400"
         WindowStyle="None"
@@ -85,19 +87,19 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding NavigateFitTestCommand}"/>
 
-                <RadioButton Content="Archivio diete"
-                             Height="70"
-                             Foreground="White"
-                             FontSize="18"
-                             Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding NavigateDieteCommand}"/>
-
                 <RadioButton Content="Archivio allenamenti"
                              Height="70"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding NavigateAllenamentiCommand}"/>
+
+                <RadioButton Content="Archivio diete"
+                             Height="70"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding NavigateDieteCommand}"/>
 
                 <RadioButton Content="Archivio alimenti"
                              Height="70"
@@ -132,8 +134,8 @@
                         <allenamentiV:AllenamentiView/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type viewModel:AlimentiViewModel}">
-                        <view:AlimentiView/>
+                    <DataTemplate DataType="{x:Type alimentiVm:AlimentiViewModel}">
+                        <alimentiV:AlimentiView/>
                     </DataTemplate>
 
                     <!-- Secondary views -->
@@ -170,13 +172,22 @@
                     </DataTemplate>
 
                     <!-- FitTest views -->
-                    <DataTemplate DataType="{x:Type fitTestVm:NuovoFitTestViewModel}">
-                        <fitTestV:NuovoFitTest/>
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestGeneralitàViewModel}">
+                        <fitTestV:FitTestGeneralità/>
                     </DataTemplate>
 
-                    <DataTemplate DataType="{x:Type fitTestVm:GuardaFitTestViewModel}">
-                        <fitTestV:GuardaFitTest/>
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestPlicheViewModel}">
+                        <fitTestV:FitTestPliche/>
                     </DataTemplate>
+                    
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestCirconferenzeViewModel}">
+                        <fitTestV:FitTestCirconferenze/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestSummaryViewModel}">
+                        <fitTestV:FitTestSummary/>
+                    </DataTemplate>
+
 
                 </ContentControl.Resources>
             </ContentControl>
