@@ -136,14 +136,23 @@ public static partial class MongoDbClient
         return _personeColl.Find(FilterDefinition<Persona>.Empty).ToList();
     }
 
-    public static Persona FindPersona(string nome, string cognome, string città, string telefono)
+    public static Persona GetPersona(string refId)
+    {
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.RefId, refId);
+
+        Persona result = _personeColl.Find(filter).First();
+
+        return result;
+    }
+
+    public static Persona? FindPersona(string nome, string cognome, string città, string telefono)
     {
         FilterDefinition<Persona> filter = Builders<Persona>.Filter.Eq(x => x.Nome, nome);
         filter &= Builders<Persona>.Filter.Eq(x => x.Cognome, cognome);
         filter &= Builders<Persona>.Filter.Eq(x => x.Città, città);
         filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, telefono);
 
-        Persona? result = _personeColl.Find(filter).First();
+        Persona? result = _personeColl.Find(filter).FirstOrDefault();
 
         return result;
     }
@@ -236,5 +245,15 @@ public static partial class MongoDbClient
         _fitTestColl.InsertOne(fitTest);
     }
 
-    public static void EditFitTest() {}
+    public static void UpdateFitTest(FitTest fitTest)
+    {
+        FilterDefinition<FitTest> filter = Builders<FitTest>.Filter.Eq(x => x.Nome, fitTest.Nome);
+        filter &= Builders<FitTest>.Filter.Eq(x => x.Cognome, fitTest.Cognome);
+        filter &= Builders<FitTest>.Filter.Eq(x => x.Data, fitTest.Data);
+
+        UpdateDefinition<FitTest> update = Builders<FitTest>.Update.Set(x => x.Pliche, fitTest.Pliche)
+           .Set(x => x.Circonferenze, fitTest.Circonferenze);
+
+        var res = _fitTestColl.UpdateOne(filter, update);
+    }
 }

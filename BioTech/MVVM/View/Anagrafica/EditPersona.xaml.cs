@@ -20,7 +20,7 @@ public partial class EditPersona : UserControl
 
     private void PrepareContent()
     {
-        Persona persona = PersonaStore.CurrentPersona;
+        Persona? persona = PersonaStore.CurrentPersona;
 
         if (persona == null)
             return;

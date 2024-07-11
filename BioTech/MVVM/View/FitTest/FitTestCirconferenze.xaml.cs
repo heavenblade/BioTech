@@ -33,11 +33,6 @@ public partial class FitTestCirconferenze : UserControl
         Gamba.Text = fitTest.Circonferenze.Gamba.ToString();
     }
 
-    private void Indietro_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
     private void Finalizza_Click(object sender, RoutedEventArgs e)
     {
         Circonferenze circonferenze = new()
@@ -52,12 +47,28 @@ public partial class FitTestCirconferenze : UserControl
 
         FitTestStore.CurrentFitTest!.Circonferenze = circonferenze;
 
-        MongoDbClient.InsertFitTest(FitTestStore.CurrentFitTest);
+        if (FitTestStore.Saved)
+        {
+            MongoDbClient.UpdateFitTest(FitTestStore.CurrentFitTest);
+        }
+        else
+        {
+            MongoDbClient.InsertFitTest(FitTestStore.CurrentFitTest);
+            FitTestStore.Saved = true;
+        }
+
+        if (PersonaStore.Saved) 
+            return;
+
+        MongoDbClient.InsertNuovaPersona(PersonaStore.CurrentPersona!);
+        PersonaStore.Saved = true;
     }
 
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)
     {
-        PersonaStore.CurrentPersona = null;
         FitTestStore.CurrentFitTest = null;
+        FitTestStore.Saved = false;
+        PersonaStore.CurrentPersona = null;
+        PersonaStore.Saved = false;
     }
 }

@@ -26,7 +26,7 @@ public partial class AnagraficaView : UserControl
         ButtonGuarda.IsEnabled = true;
     }
 
-    private void GuardaPersona_OnClick(object sender, RoutedEventArgs e)
+    private void GuardaPersona_Click(object sender, RoutedEventArgs e)
     {
         var selectedPersona = ListaPersone.SelectedItem as Persona;
 
@@ -52,7 +52,7 @@ public partial class AnagraficaView : UserControl
         ListaPersone.ItemsSource = MongoDbClient.GetPersoneWithFilter(ricerca.ToLower());
     }
 
-    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
+    private void ButtonReset_Click(object sender, RoutedEventArgs e)
     {
         Ricerca.Text = "";
         BuildListaPersone();

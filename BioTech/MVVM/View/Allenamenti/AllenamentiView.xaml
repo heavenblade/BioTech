@@ -40,7 +40,6 @@
                 <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaAllenamentoCommand}" Click="LoadTabella_OnClick" IsEnabled="False"/>
                 <Button Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
                 <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateModificaAllenamentoCommand}" Click="LoadTabella_OnClick" IsEnabled="False"/>
-                <Button Content="Rinomina" Style="{StaticResource MainWindowButtonTheme}" Click="RinominaTabella_OnClick"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovoAllenamentoCommand}"/>

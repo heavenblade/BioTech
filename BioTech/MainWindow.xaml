@@ -20,7 +20,6 @@
         mc:Ignorable="d"
         Height="850" Width="1400"
         WindowStyle="None"
-        ResizeMode="CanResizeWithGrip"
         Background="Transparent"
         AllowsTransparency="True"
         Title="Biotech">

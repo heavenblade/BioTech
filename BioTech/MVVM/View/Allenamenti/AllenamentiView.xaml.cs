@@ -2,7 +2,6 @@
 using System.Windows.Controls;
 using BioTech.Core;
 using BioTech.MVVM.Model.Stores;
-using Microsoft.VisualBasic;
 
 namespace BioTech.MVVM.View.Allenamenti;
 
@@ -46,31 +45,6 @@ public partial class AllenamentiView : UserControl
            .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
 
         AllenamentoStore.CurrentAllenamento = MongoDbClient.FindAllenamento(nome, categoria);
-    }
-
-    private void RinominaTabella_OnClick(object sender, RoutedEventArgs e)
-    {
-        if (ListaAllenamenti.SelectedItems.Count == 0)
-        {
-            MessageBox.Show("Selezionare prima una tabella dalla lista!");
-
-            return;
-        }
-
-        var oldName = (string)ListaAllenamenti.SelectedItems[0]!;
-
-        string newName = Interaction.InputBox("Inserire il nuovo nome per la tabella selezionata:",
-            "Rinomina");
-
-        MongoDbClient.RenameAllenamento(oldName, newName);
-
-        var categoria = CategoriaFilter.Children.OfType<RadioButton>()
-           .First(r => r.IsChecked.HasValue && r.IsChecked.Value).Content.ToString();
-
-        if (categoria == null)
-            return;
-
-        LoadListaAllenamenti(categoria);
     }
 
     private void ButtonReset_OnClick(object sender, RoutedEventArgs e)

@@ -100,7 +100,7 @@ namespace BioTech.MVVM.View.FitTest {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BioTech;component/mvvm/view/fittest/fittestcirconferenze.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BioTech;V1.0.0.0;component/mvvm/view/fittest/fittestcirconferenze.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\View\FitTest\FitTestCirconferenze.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

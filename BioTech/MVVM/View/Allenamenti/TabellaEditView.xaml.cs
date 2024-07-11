@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using BioTech.Core;
 using BioTech.MVVM.Model;
 using BioTech.MVVM.Model.Stores;
+using Microsoft.VisualBasic;
 
 namespace BioTech.MVVM.View.Allenamenti;
 
@@ -33,6 +34,15 @@ public partial class TabellaEditView : UserControl
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)
     {
         AllenamentoStore.CurrentAllenamento = null;
+    }
+
+    private void RinominaTabella_OnClick(object sender, RoutedEventArgs e)
+    {
+        string newName = Interaction.InputBox("Inserire il nuovo nome per la tabella selezionata:", "Rinomina");
+
+        MongoDbClient.RenameAllenamento(NomeTabella.Text, newName);
+
+        NomeTabella.Text = newName;
     }
 
     private void StampaButton_Click(object sender, RoutedEventArgs e)

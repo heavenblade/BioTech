@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BioTech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e012f6def4e91766aad21909f9afc0b19c6a0aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f65a077c7a4be7fc7b1e537050d19f4808ea596")]
 [assembly: System.Reflection.AssemblyProductAttribute("BioTech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BioTech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

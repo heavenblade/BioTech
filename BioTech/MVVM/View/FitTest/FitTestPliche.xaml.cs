@@ -1,6 +1,7 @@
 ﻿using BioTech.MVVM.Model.Stores;
 using System.Windows;
 using System.Windows.Controls;
+using BioTech.MVVM.Model;
 
 namespace BioTech.MVVM.View.FitTest;
 
@@ -42,30 +43,26 @@ public partial class FitTestPliche : UserControl
     {
         var now = DateTime.Now;
 
-        var nuovoFitTest = new Model.FitTest
+        Pliche pliche = new()
         {
-            Nome = PersonaStore.CurrentPersona.Nome,
-            Cognome = PersonaStore.CurrentPersona.Cognome,
-            Data = now.AddHours(TimeZoneInfo.Local.IsDaylightSavingTime(now) ? 2 : 1),
-            Pliche = new()
-            {
-                Bicipite = double.Parse(Bicipite.Text),
-                Tricipite = double.Parse(Tricipite.Text),
-                Torace = double.Parse(Torace.Text),
-                Sottoscapola = double.Parse(Sottoscapola.Text),
-                Soprailio = double.Parse(Soprailio.Text),
-                Ombelico = double.Parse(Ombelico.Text),
-                Coscia = double.Parse(Coscia.Text),
-                CosciaEsterna = double.Parse(CosciaEsterna.Text)
-            }
+            Bicipite = double.Parse(Bicipite.Text),
+            Tricipite = double.Parse(Tricipite.Text),
+            Torace = double.Parse(Torace.Text),
+            Sottoscapola = double.Parse(Sottoscapola.Text),
+            Soprailio = double.Parse(Soprailio.Text),
+            Ombelico = double.Parse(Ombelico.Text),
+            Coscia = double.Parse(Coscia.Text),
+            CosciaEsterna = double.Parse(CosciaEsterna.Text)
         };
 
-        FitTestStore.CurrentFitTest = nuovoFitTest;
+        FitTestStore.CurrentFitTest!.Pliche = pliche;
     }
 
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)
     {
         FitTestStore.CurrentFitTest = null;
+        FitTestStore.Saved = false;
         PersonaStore.CurrentPersona = null;
+        PersonaStore.Saved = false;
     }
 }

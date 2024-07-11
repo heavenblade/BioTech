@@ -77,3 +77,4 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\Vi
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestPliche.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\FitTest\FitTestPliche.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\MVVM\View\Alimenti\AlimentiView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows\BioTech_Content.g.cs

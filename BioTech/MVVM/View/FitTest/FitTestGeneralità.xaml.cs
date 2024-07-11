@@ -19,7 +19,7 @@ public partial class FitTestGeneralità : UserControl
 
     private void PrepareContent()
     {
-        Persona persona = PersonaStore.CurrentPersona;
+        Persona? persona = PersonaStore.CurrentPersona;
 
         if (persona == null)
             return;
@@ -39,13 +39,16 @@ public partial class FitTestGeneralità : UserControl
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)
     {
         FitTestStore.CurrentFitTest = null;
+        FitTestStore.Saved = false;
         PersonaStore.CurrentPersona = null;
+        PersonaStore.Saved = false;
     }
 
     private void Avanti_Click(object sender, RoutedEventArgs e)
     {
-        var nuovaPersona = new Persona
+        Persona persona = new()
         {
+            RefId = !PersonaStore.Saved ? Guid.NewGuid().ToString() : PersonaStore.CurrentPersona!.RefId,
             Nome = Nome.Text,
             Cognome = Cognome.Text,
             Altezza = double.Parse(Altezza.Text),
@@ -60,6 +63,9 @@ public partial class FitTestGeneralità : UserControl
             Telefono = Telefono.Text
         };
 
-        PersonaStore.CurrentPersona = nuovaPersona;
+        PersonaStore.CurrentPersona = persona;
+        FitTestStore.CurrentFitTest!.RefId = persona.RefId;
+        FitTestStore.CurrentFitTest.Nome = persona.Nome;
+        FitTestStore.CurrentFitTest.Cognome = persona.Cognome;
     }
 }

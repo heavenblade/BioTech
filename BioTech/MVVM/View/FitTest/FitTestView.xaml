@@ -10,7 +10,7 @@
             <RowDefinition Height="80" />
         </Grid.RowDefinitions>
 
-        <TextBlock Margin="0,0,0,0"
+        <TextBlock Margin="10,0,0,0"
                    FontSize="30"
                    Foreground="White">
             Fit test
@@ -18,8 +18,7 @@
 
         <ListView x:Name="ListaFitTest"
                   FontSize="20"
-                  Margin="-105,45,25,25"
-                  HorizontalAlignment="Stretch"
+                  Margin="-133,45,25,25"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   Width="1000"
                   ItemContainerStyle="{StaticResource CustomListViewItemStyle}"
@@ -27,21 +26,21 @@
 
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Nome}" Width="331"/>
-                    <GridViewColumn Header="Cognome" DisplayMemberBinding="{Binding Cognome}" Width="331"/>
-                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding Data}" Width="332"/>
+                    <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Nome}" Width="370"/>
+                    <GridViewColumn Header="Cognome" DisplayMemberBinding="{Binding Cognome}" Width="370"/>
+                    <GridViewColumn Header="Data" DisplayMemberBinding="{Binding DataString}" Width="252"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <StackPanel Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
-                <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}"/>
-                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaFitTestCommand}" Click="GuardaFitTest_OnClick" IsEnabled="False"/>
-                <Button Name="ButtonCopia" Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="CopiaFitTest_OnClick" IsEnabled="False"/>
-                <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="ModificaFitTest_OnClick" IsEnabled="False"/>
+                <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="NuovoFitTest_Click"/>
+                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaFitTestCommand}" Click="GuardaFitTest_Click" IsEnabled="False"/>
+                <Button Name="ButtonCopia" Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="CopiaFitTest_Click" IsEnabled="False"/>
+                <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="ModificaFitTest_Click" IsEnabled="False"/>
                 <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
-                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
+                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>
