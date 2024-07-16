@@ -68,4 +68,25 @@ public partial class FitTestGeneralità : UserControl
         FitTestStore.CurrentFitTest.Nome = persona.Nome;
         FitTestStore.CurrentFitTest.Cognome = persona.Cognome;
     }
+
+    private void OnTextChanged(object sender, RoutedEventArgs e)
+    {
+        if (!Nome.Text.Equals("") &&
+            !Cognome.Text.Equals("") &&
+            !Altezza.Text.Equals("") &&
+            !Peso.Text.Equals("") &&
+            !DataNascita.Text.Equals("") &&
+            !Indirizzo.Text.Equals("") &&
+            !Città.Text.Equals("") &&
+            !Professione.Text.Equals("") &&
+            !Sport.Text.Equals("") &&
+            !Telefono.Text.Equals(""))
+        {
+            AvantiButton.IsEnabled = true;
+        }
+        else
+        {
+            AvantiButton.IsEnabled = false;
+        }
+    }
 }

@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace BioTech.Core;
 
-public static partial class MongoDbClient
+public static class MongoDbClient
 {
     private static MongoClient _client;
 
@@ -121,13 +121,22 @@ public static partial class MongoDbClient
         _dieteColl.InsertOne(dieta);
     }
 
-    public static void RenameDieta(string oldName, string newName)
+    public static void UpdateDieta(Dieta dieta)
     {
-        FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.Eq(x => x.Nome, oldName);
+        FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.Eq(x => x.Nome, dieta.Nome);
+        filter &= Builders<Dieta>.Filter.Eq(x => x.Categoria, dieta.Categoria);
 
-        UpdateDefinition<Dieta> update = Builders<Dieta>.Update.Set(x => x.Nome, newName);
+        UpdateDefinition<Dieta> update = Builders<Dieta>.Update.Set(x => x.Programma, dieta.Programma);
 
         _dieteColl.UpdateOne(filter, update);
+    }
+
+    public static void DeleteDieta(Dieta dieta)
+    {
+        FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.Eq(x => x.Nome, dieta.Nome);
+        filter &= Builders<Dieta>.Filter.Eq(x => x.Categoria, dieta.Categoria);
+
+        _dieteColl.DeleteOne(filter);
     }
 
     // Persone
@@ -225,6 +234,13 @@ public static partial class MongoDbClient
         FilterDefinition<FitTest>? filter = Builders<FitTest>.Filter.Or(
             Builders<FitTest>.Filter.Where(x => x.Nome.ToLower().Contains(ricerca)),
             Builders<FitTest>.Filter.Where(x => x.Cognome.ToLower().Contains(ricerca)));
+
+        return _fitTestColl.Find(filter).ToList();
+    }
+
+    public static List<FitTest> GetAllFitTestOfPerson(string refId)
+    {
+        FilterDefinition<FitTest>? filter = Builders<FitTest>.Filter.Eq(x => x.RefId, refId);
 
         return _fitTestColl.Find(filter).ToList();
     }

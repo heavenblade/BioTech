@@ -49,27 +49,27 @@
 
                 <StackPanel>
 
-                    <TextBox x:Name="Bicipite" Width="300" HorizontalAlignment="Left" Margin="10,20, 0,5" FontSize="26"/>
+                    <TextBox x:Name="Bicipite" Width="300" HorizontalAlignment="Left" Margin="10,20, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Tricipite" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
-                    
-                    <TextBox x:Name="Torace" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+                    <TextBox x:Name="Tricipite" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Sottoscapola" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
-                    
-                    <TextBox x:Name="Soprailio" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
-                    
-                    <TextBox x:Name="Ombelico" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
-                    
-                    <TextBox x:Name="Coscia" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
-                    
-                    <TextBox x:Name="CosciaEsterna" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26"/>
+                    <TextBox x:Name="Torace" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+
+                    <TextBox x:Name="Sottoscapola" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+
+                    <TextBox x:Name="Soprailio" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+
+                    <TextBox x:Name="Ombelico" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+
+                    <TextBox x:Name="Coscia" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+
+                    <TextBox x:Name="CosciaEsterna" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
                 </StackPanel>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
                 <Button Content="Indietro" Style="{StaticResource MainWindowButtonTheme}" Click="Indietro_Click" Command="{Binding NavigateFitTestGeneralitàCommand}"/>
-                <Button Content="Avanti" Style="{StaticResource MainWindowButtonTheme}" Click="Avanti_Click" Command="{Binding NavigateFitTestCirconferenzeCommand}"/>
+                <Button Name="AvantiButton" Content="Avanti" Style="{StaticResource MainWindowButtonTheme}" Click="Avanti_Click" Command="{Binding NavigateFitTestCirconferenzeCommand}" IsEnabled="False"/>
                 <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
             </StackPanel>
         </StackPanel>

@@ -24,8 +24,6 @@
         AllowsTransparency="True"
         Title="Biotech">
 
-
-
     <Border Background="#272537"
             MouseDown="BorderMouseDown">
         <Grid Margin="0,0,0,10">
@@ -67,7 +65,6 @@
 
                 <Button Name="ButtonClose" Content="╳" Style="{StaticResource CloseButtonTheme}"
                         Click="ButtonCloseClick"/>
-
             </StackPanel>
 
             <StackPanel Grid.Row="1"
@@ -113,7 +110,6 @@
                              Click="ChangeTab_Click"/>
             </StackPanel>
 
-
             <ContentControl Grid.Row="1" Grid.Column="1" Margin="10"
                 Content="{Binding CurrentViewModel}">
                 <ContentControl.Resources>
@@ -150,29 +146,33 @@
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type allenamentiVm:GuardaAllenamentoViewModel}">
-                        <allenamentiV:TabellaReadOnlyView/>
+                        <allenamentiV:GuardaTabellaView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type allenamentiVm:ModificaAllenamentoViewModel}">
-                        <allenamentiV:TabellaEditView/>
+                        <allenamentiV:ModificaTabellaView/>
                     </DataTemplate>
 
                     <!-- Diete views -->
                     <DataTemplate DataType="{x:Type dieteVm:NuovaDietaViewModel}">
-                        <dieteV:DietaView/>
+                        <dieteV:NuovaDietaView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type dieteVm:GuardaDietaViewModel}">
-                        <dieteV:DietaView/>
+                        <dieteV:GuardaDietaView/>
+                    </DataTemplate>
+
+                    <DataTemplate DataType="{x:Type dieteVm:ModificaDietaViewModel}">
+                        <dieteV:ModificaDietaView/>
                     </DataTemplate>
 
                     <!-- Anagrafica views -->
                     <DataTemplate DataType="{x:Type anagraficaVm:NuovaPersonaViewModel}">
-                        <anagraficaV:NuovaPersona/>
+                        <anagraficaV:NuovaPersonaView/>
                     </DataTemplate>
 
                     <DataTemplate DataType="{x:Type anagraficaVm:EditPersonaViewModel}">
-                        <anagraficaV:EditPersona/>
+                        <anagraficaV:ModificaPersonaView/>
                     </DataTemplate>
 
                     <!-- FitTest views -->
@@ -196,11 +196,11 @@
                         <fitTestV:FitTestSummary/>
                     </DataTemplate>
 
-
+                    <DataTemplate DataType="{x:Type fitTestVm:FitTestConfrontoViewModel}">
+                        <fitTestV:FitTestConfronto/>
+                    </DataTemplate>
                 </ContentControl.Resources>
             </ContentControl>
-
         </Grid>
-
     </Border>
 </Window>

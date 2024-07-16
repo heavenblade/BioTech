@@ -3,8 +3,6 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.177
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\TabellaEditView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\TabellaReadOnlyView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\AnagraficaView.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\EditPersona.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\NuovaPersona.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\DieteView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestCirconferenze.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestGeneralità.baml
@@ -26,9 +24,6 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.177
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\TabellaEditView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\TabellaReadOnlyView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\AnagraficaView.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\EditPersona.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\NuovaPersona.g.cs
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\DietaView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\DieteView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestCirconferenze.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestGeneralità.g.cs
@@ -67,7 +62,6 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\bin\Debug\net6.0-windows10.0.177
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MainWindow.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Alimenti\AlimentiView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\NuovoAllenamentoView.baml
-C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\DietaView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\HomeView.baml
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\BioTech.g.resources
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\BioTech.GeneratedMSBuildEditorConfig.editorconfig
@@ -81,3 +75,15 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.177
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\BioTech.pdb
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\BioTech.genruntimeconfig.cache
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\ref\BioTech.dll
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestConfronto.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\FitTest\FitTestConfronto.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\ModificaPersonaView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\NuovaPersonaView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\ModificaPersonaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Anagrafica\NuovaPersonaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\GuardaDietaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\ModificaDietaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\NuovaDietaView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\NuovaDietaView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\GuardaDietaView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Diete\ModificaDietaView.baml

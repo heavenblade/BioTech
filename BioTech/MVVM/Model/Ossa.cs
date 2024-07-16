@@ -7,8 +7,8 @@ public class Ossa
     [BsonElement("polso")]
     public double Polso { get; set; }
 
-    [BsonElement("ginocchia")]
-    public double Ginocchia { get; set; }
+    [BsonElement("ginocchio")]
+    public double Ginocchio { get; set; }
 
     [BsonElement("caviglia")]
     public double Caviglia { get; set; }

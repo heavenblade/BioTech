@@ -43,7 +43,10 @@ public partial class MainWindow : Window
     private void ChangeTab_Click(object sender, RoutedEventArgs e)
     {
         PersonaStore.CurrentPersona = null;
+        PersonaStore.Saved = false;
         FitTestStore.CurrentFitTest = null;
+        FitTestStore.Saved = false;
+        FitTestStore.PreviousFitTest = null;
         AllenamentoStore.CurrentAllenamento = null;
         DietaStore.CurrentDieta = null;
     }

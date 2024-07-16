@@ -65,4 +65,23 @@ public partial class FitTestPliche : UserControl
         PersonaStore.CurrentPersona = null;
         PersonaStore.Saved = false;
     }
+
+    private void OnTextChanged(object sender, RoutedEventArgs e)
+    {
+        if (!Bicipite.Text.Equals("") &&
+            !Tricipite.Text.Equals("") &&
+            !Torace.Text.Equals("") &&
+            !Sottoscapola.Text.Equals("") &&
+            !Soprailio.Text.Equals("") &&
+            !Ombelico.Text.Equals("") &&
+            !Coscia.Text.Equals("") &&
+            !CosciaEsterna.Text.Equals(""))
+        {
+            AvantiButton.IsEnabled = true;
+        }
+        else
+        {
+            AvantiButton.IsEnabled = false;
+        }
+    }
 }

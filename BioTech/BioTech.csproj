@@ -23,13 +23,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="MVVM\View\Allenamenti\TabellaEditView.xaml.cs">
+    <Compile Update="MVVM\View\Allenamenti\ModificaTabellaView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Anagrafica\EditPersona.xaml.cs">
+    <Compile Update="MVVM\View\Anagrafica\ModificaPersonaView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Anagrafica\NuovaPersona.xaml.cs">
+    <Compile Update="MVVM\View\Anagrafica\NuovaPersonaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\FitTest\FitTestConfronto.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\FitTest\GuardaFitTest.xaml.cs">

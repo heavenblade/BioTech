@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\m.amatori\source\repos\BioTech\BioTech\App.xaml
-24-1995158855
+27-1288903636
 12118240776
-58-365201272
+63-956722983
 207-427361885
-MainWindow.xaml;MVVM\View\Alimenti\AlimentiView.xaml;MVVM\View\Allenamenti\AllenamentiView.xaml;MVVM\View\Allenamenti\NuovoAllenamentoView.xaml;MVVM\View\Allenamenti\TabellaEditView.xaml;MVVM\View\Allenamenti\TabellaReadOnlyView.xaml;MVVM\View\Anagrafica\AnagraficaView.xaml;MVVM\View\Anagrafica\EditPersona.xaml;MVVM\View\Anagrafica\NuovaPersona.xaml;MVVM\View\Diete\DietaView.xaml;MVVM\View\Diete\DieteView.xaml;MVVM\View\FitTest\FitTestCirconferenze.xaml;MVVM\View\FitTest\FitTestGeneralità.xaml;MVVM\View\FitTest\FitTestPliche.xaml;MVVM\View\FitTest\FitTestSummary.xaml;MVVM\View\FitTest\FitTestView.xaml;MVVM\View\FitTest\GuardaFitTest.xaml;MVVM\View\HomeView.xaml;Themes\AlternatingRowColor.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\CloseButtonTheme.xaml;Themes\MainWindowButtonTheme.xaml;Themes\MenuButtonTheme.xaml;Themes\WindowButtonsTheme.xaml;
+MainWindow.xaml;MVVM\View\Alimenti\AlimentiView.xaml;MVVM\View\Allenamenti\AllenamentiView.xaml;MVVM\View\Allenamenti\GuardaTabellaView.xaml;MVVM\View\Allenamenti\ModificaTabellaView.xaml;MVVM\View\Allenamenti\NuovoAllenamentoView.xaml;MVVM\View\Anagrafica\AnagraficaView.xaml;MVVM\View\Anagrafica\ModificaPersonaView.xaml;MVVM\View\Anagrafica\NuovaPersonaView.xaml;MVVM\View\Diete\DieteView.xaml;MVVM\View\Diete\GuardaDietaView.xaml;MVVM\View\Diete\ModificaDietaView.xaml;MVVM\View\Diete\NuovaDietaView.xaml;MVVM\View\FitTest\FitTestCirconferenze.xaml;MVVM\View\FitTest\FitTestConfronto.xaml;MVVM\View\FitTest\FitTestGeneralità.xaml;MVVM\View\FitTest\FitTestPliche.xaml;MVVM\View\FitTest\FitTestSummary.xaml;MVVM\View\FitTest\FitTestView.xaml;MVVM\View\FitTest\GuardaFitTest.xaml;MVVM\View\HomeView.xaml;Themes\AlternatingRowColor.xaml;Themes\CategoriaRadioButtonTheme.xaml;Themes\CloseButtonTheme.xaml;Themes\MainWindowButtonTheme.xaml;Themes\MenuButtonTheme.xaml;Themes\WindowButtonsTheme.xaml;
 
-False
+True
 

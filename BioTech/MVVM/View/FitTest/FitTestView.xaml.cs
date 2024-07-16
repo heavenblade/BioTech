@@ -14,12 +14,12 @@ public partial class FitTestView : UserControl
     {
         InitializeComponent();
 
-        BuildListaFitTest();
+        BuildListaFitTest(Ricerca.Text);
     }
 
-    private void BuildListaFitTest()
+    private void BuildListaFitTest(string ricerca)
     {
-        var fitTestList = MongoDbClient.GetFitTest();
+        var fitTestList = ricerca.Equals("") ? MongoDbClient.GetFitTest() : MongoDbClient.GetFitTestWithFilter(ricerca.ToLower());
 
         foreach (var fitTest in fitTestList)
             fitTest.DataString = fitTest.Data.ToShortDateString();
@@ -76,7 +76,7 @@ public partial class FitTestView : UserControl
         FitTestStore.CurrentFitTest = fitTest;
         FitTestStore.Saved = true;
 
-        BuildListaFitTest();
+        BuildListaFitTest(Ricerca.Text);
     }
 
     private void ModificaFitTest_Click(object sender, RoutedEventArgs e)
@@ -93,23 +93,12 @@ public partial class FitTestView : UserControl
         PersonaStore.Saved = true;
     }
 
-    private void Ricerca_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        string ricerca = Ricerca.Text;
-
-        if (ricerca.Length == 0)
-        {
-            BuildListaFitTest();
-
-            return;
-        }
-
-        ListaFitTest.ItemsSource = MongoDbClient.GetFitTestWithFilter(ricerca.ToLower());
-    }
+    private void Ricerca_TextChanged(object sender, TextChangedEventArgs e) =>
+        BuildListaFitTest(Ricerca.Text);
 
     private void ButtonReset_Click(object sender, RoutedEventArgs e)
     {
         Ricerca.Text = "";
-        BuildListaFitTest();
+        BuildListaFitTest(Ricerca.Text);
     }
 }

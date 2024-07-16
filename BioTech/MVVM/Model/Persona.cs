@@ -24,7 +24,7 @@ public class Persona
     public string? Sesso { get; set; }
     
     [BsonElement("dataNascita")]
-    public string? DataNascita { get; set; }
+    public string DataNascita { get; set; }
     
     [BsonElement("indirizzo")]
     public string Indirizzo { get; set; }

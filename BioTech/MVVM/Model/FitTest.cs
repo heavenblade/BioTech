@@ -17,9 +17,8 @@ public class FitTest
     [BsonElement("data")]
     public DateTime Data { get; set; }
 
-    [BsonElement("dataString")]
     public string DataString { get; set; }
-    
+
     [BsonElement("dati")]
     public Dati Dati { get; set; }
 

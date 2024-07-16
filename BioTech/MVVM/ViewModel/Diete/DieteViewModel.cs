@@ -8,10 +8,12 @@ class DieteViewModel : BaseViewModel
 {
     public ICommand NavigateNuovaDietaCommand { get; }
     public ICommand NavigateGuardaDietaCommand { get; }
+    public ICommand NavigateModificaDietaCommand { get; }
 
     public DieteViewModel(NavigationStore navigationStore)
     {
         NavigateNuovaDietaCommand = new NavigateCommand<NuovaDietaViewModel>(navigationStore, () => new(navigationStore));
         NavigateGuardaDietaCommand = new NavigateCommand<GuardaDietaViewModel>(navigationStore, () => new(navigationStore));
+        NavigateModificaDietaCommand = new NavigateCommand<ModificaDietaViewModel>(navigationStore, () => new(navigationStore));
     }
 }

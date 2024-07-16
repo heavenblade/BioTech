@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="BioTech.MVVM.View.Diete.NuovaDietaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:model="clr-namespace:BioTech.MVVM.Model"
+             mc:Ignorable="d" 
+             Background="Transparent">
+    <Grid>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <model:CategorieDiete x:Key="categorie"/>
+            </StackPanel.Resources>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Nome nuova dieta</TextBlock>
+
+            <TextBox Name="NomeNuovaDieta" Width="400" HorizontalAlignment="Left" Margin="0,5, 0,0"
+                     FontSize="20"/>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Categoria</TextBlock>
+            
+            <ComboBox Name="CategoriaNuovaDieta"
+                      HorizontalAlignment="Left"
+                      ItemsSource="{StaticResource categorie}"
+                      Text="Seleziona"
+                      IsReadOnly="True" Width="400"
+                      Margin="0,5,0,0"
+                      FontSize="20"/>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Dieta</TextBlock>
+
+            <TextBox Name="ProgrammaNuovaDieta"
+                     HorizontalAlignment="Left" 
+                     Margin="0,5,0,0" 
+                     TextWrapping="Wrap" 
+                     Text="" 
+                     VerticalAlignment="Top" 
+                     Width="780" Height="420"
+                     FontSize="20"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateDieteCommand}"/>
+                <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
+                <Button Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

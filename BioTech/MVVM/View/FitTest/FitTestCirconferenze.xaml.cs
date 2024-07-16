@@ -1,5 +1,4 @@
-﻿using BioTech.MVVM.Model;
-using BioTech.MVVM.Model.Stores;
+﻿using BioTech.MVVM.Model.Stores;
 using System.Windows;
 using System.Windows.Controls;
 using BioTech.Core;
@@ -31,11 +30,14 @@ public partial class FitTestCirconferenze : UserControl
         Vita.Text = fitTest.Circonferenze.Vita.ToString();
         Fianchi.Text = fitTest.Circonferenze.Fianchi.ToString();
         Gamba.Text = fitTest.Circonferenze.Gamba.ToString();
+        Polso.Text = fitTest.Ossa.Polso.ToString();
+        Ginocchio.Text = fitTest.Ossa.Ginocchio.ToString();
+        Caviglia.Text = fitTest.Ossa.Caviglia.ToString();
     }
 
     private void Finalizza_Click(object sender, RoutedEventArgs e)
     {
-        Circonferenze circonferenze = new()
+        FitTestStore.CurrentFitTest!.Circonferenze = new()
         {
             Braccio = double.Parse(Braccio.Text),
             Spalle = double.Parse(Spalle.Text),
@@ -44,8 +46,20 @@ public partial class FitTestCirconferenze : UserControl
             Fianchi = double.Parse(Fianchi.Text),
             Gamba = double.Parse(Gamba.Text)
         };
+        
+        FitTestStore.CurrentFitTest.Ossa = new()
+        {
+            Polso = double.Parse(Polso.Text),
+            Ginocchio = double.Parse(Ginocchio.Text),
+            Caviglia = double.Parse(Caviglia.Text)
+        };
 
-        FitTestStore.CurrentFitTest!.Circonferenze = circonferenze;
+        FitTestStore.CurrentFitTest.Dati = new()
+        {
+            Altezza = PersonaStore.CurrentPersona!.Altezza,
+            Peso = PersonaStore.CurrentPersona.Peso,
+            BodyFat = Math.Round(ComputeBodyFatPercentage(), 1)
+        };
 
         if (FitTestStore.Saved)
         {
@@ -57,10 +71,10 @@ public partial class FitTestCirconferenze : UserControl
             FitTestStore.Saved = true;
         }
 
-        if (PersonaStore.Saved) 
+        if (PersonaStore.Saved)
             return;
 
-        MongoDbClient.InsertNuovaPersona(PersonaStore.CurrentPersona!);
+        MongoDbClient.InsertNuovaPersona(PersonaStore.CurrentPersona);
         PersonaStore.Saved = true;
     }
 
@@ -70,5 +84,64 @@ public partial class FitTestCirconferenze : UserControl
         FitTestStore.Saved = false;
         PersonaStore.CurrentPersona = null;
         PersonaStore.Saved = false;
+    }
+
+    private void OnTextChanged(object sender, RoutedEventArgs e)
+    {
+        if (!Braccio.Text.Equals("") &&
+            !Spalle.Text.Equals("") &&
+            !Torace.Text.Equals("") &&
+            !Vita.Text.Equals("") &&
+            !Fianchi.Text.Equals("") &&
+            !Gamba.Text.Equals("") &&
+            !Polso.Text.Equals("") &&
+            !Ginocchio.Text.Equals("") &&
+            !Caviglia.Text.Equals(""))
+        {
+            FinalizzaButton.IsEnabled = true;
+        }
+        else
+        {
+            FinalizzaButton.IsEnabled = false;
+        }
+    }
+
+    private static double ComputeBodyFatPercentage() => 
+        PersonaStore.CurrentPersona!.Sesso!.Equals("Maschio") ? JacksonPollockM() : JacksonPollockF();
+
+    private static double JacksonPollockM()
+    {
+        double densità = 1.112 - 0.00043499 * SumPliche() + 0.00000055 * Math.Pow(SumPliche(), 2) - 0.00028826 * Età();
+        return 495/densità - 450;
+    }
+
+    private static double JacksonPollockF()
+    {
+        double densità = 1.097 - 0.00046971 * SumPliche() + 0.00000056 * Math.Pow(SumPliche(), 2) - 0.00012828 * Età();
+        return 495/densità - 450;
+    }
+
+    private static double SumPliche()
+    {
+        return FitTestStore.CurrentFitTest!.Pliche.Bicipite +
+            FitTestStore.CurrentFitTest.Pliche.Tricipite +
+            FitTestStore.CurrentFitTest.Pliche.Torace +
+            FitTestStore.CurrentFitTest.Pliche.Sottoscapola +
+            FitTestStore.CurrentFitTest.Pliche.Soprailio +
+            FitTestStore.CurrentFitTest.Pliche.Ombelico +
+            FitTestStore.CurrentFitTest.Pliche.Coscia +
+            FitTestStore.CurrentFitTest.Pliche.CosciaEsterna;
+    }
+
+    private static int Età()
+    {
+        DateTime now = DateTime.Now;
+        DateTime dataNascita = DateTime.Parse(PersonaStore.CurrentPersona!.DataNascita!);
+        int age = DateTime.Now.Year - dataNascita.Year;
+
+        if (now.Month < dataNascita.Month || (now.Month == dataNascita.Month && now.Day < dataNascita.Day))
+            age--;
+
+        return age;
     }
 }

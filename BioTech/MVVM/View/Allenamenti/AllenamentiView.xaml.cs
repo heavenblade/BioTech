@@ -22,14 +22,13 @@ public partial class AllenamentiView : UserControl
         if (categoria == null)
             return;
 
-        LoadListaAllenamenti(categoria);
+        LoadListaAllenamenti(categoria, "");
     }
-
-    private void LoadListaAllenamenti(string categoria) => 
-        ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList();
-
-    private void LoadListaAllenamentiWithFilter(string categoria, string ricerca) =>
-        ListaAllenamenti.ItemsSource = MongoDbClient.GetAllenamentiPerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
+    
+    private void LoadListaAllenamenti(string categoria, string ricerca) =>
+        ListaAllenamenti.ItemsSource = ricerca.Equals("") ? MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList()
+            : MongoDbClient.GetAllenamentiPerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
+    
 
     private void OnSelectedAllenamento(object sender, RoutedEventArgs e)
     {
@@ -54,23 +53,14 @@ public partial class AllenamentiView : UserControl
 
         Ricerca.Text = "";
         
-        LoadListaAllenamenti(categoria);
+        LoadListaAllenamenti(categoria, Ricerca.Text);
     }
 
     private void Ricerca_TextChanged(object sender, TextChangedEventArgs e)
     {
         var categoria = CategoriaFilter.Children.OfType<RadioButton>()
            .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();
-
-        string ricerca = Ricerca.Text;
-
-        if (ricerca.Length == 0)
-        {
-            LoadListaAllenamenti(categoria);
-
-            return;
-        }
-
-        LoadListaAllenamentiWithFilter(categoria, ricerca.ToLower());
+        
+        LoadListaAllenamenti(categoria, Ricerca.Text);
     }
 }

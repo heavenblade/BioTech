@@ -7,40 +7,37 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition  Height="80"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="18*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="10,0,0,0"
+                       FontSize="30"
+                       Foreground="White">Diete</TextBlock>
 
-        <TextBlock Margin="10,0,0,0"
-           FontSize="30"
-           Foreground="White">Diete</TextBlock>
+            <ListView Name="ListaDiete"
+                      FontSize="20"
+                      Margin="-80,45,25,25"
+                      HorizontalAlignment="Stretch"
+                      SelectionChanged="OnSelectedDieta"
+                      Width="870"></ListView>
 
-        <ListView x:Name="ListaDiete"
-                FontSize="20"
-                Margin="0,45,25,25"
-                HorizontalAlignment="Stretch"
-                SelectionChanged="OnSelectedDieta">
-        </ListView>
-
-        <StackPanel Grid.Column="1" Grid.Row="0" x:Name="CategoriaFilter" Margin="10,101,-10,75">
-            <RadioButton Content="BodyBuilding" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center" IsChecked="True"/>
-            <RadioButton Content="Fitness" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
-            <RadioButton Content="Sport vari" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
-            <RadioButton Content="Diete+Patologie" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
+            <StackPanel Name="CategoriaFilter" Margin="10,101,-10,75">
+                <RadioButton Content="BodyBuilding" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center" IsChecked="True"/>
+                <RadioButton Content="Fitness" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
+                <RadioButton Content="Sport vari" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
+                <RadioButton Content="Diete+Patologie" Style="{StaticResource CategoriaRadioButtonTheme}" Checked="BuildListaDiete" VerticalContentAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1">
-            <StackPanel Orientation="Horizontal" Margin="20,15,0,0" >
+            <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovaDietaCommand}"/>
-                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaDietaCommand}" Click="GuardaDieta_OnClick" IsEnabled="False"/>
-                <Button Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click"/>
-                <Button Content="Rinomina" Style="{StaticResource MainWindowButtonTheme}" Click="RinominaDieta_OnClick"/>
-                <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
-                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_OnClick"/>
+                <Button Name="ButtonCopia" Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="Button_Click" IsEnabled="False"/>
+                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Click="GuardaOModificaDieta_Click" Command="{Binding NavigateGuardaDietaCommand}" IsEnabled="False"/>
+                <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Click="GuardaOModificaDieta_Click" Command="{Binding NavigateModificaDietaCommand}" IsEnabled="False"/>
+                <TextBox Name="Ricerca" Width="300" HorizontalAlignment="Left" Margin="10,4,0,5" FontSize="26" TextChanged="Ricerca_TextChanged"/>
+                <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

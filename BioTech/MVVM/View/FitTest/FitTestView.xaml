@@ -7,18 +7,16 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="80" />
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
         <TextBlock Margin="10,0,0,0"
                    FontSize="30"
-                   Foreground="White">
-            Fit test
-        </TextBlock>
+                   Foreground="White">Fit test</TextBlock>
 
         <ListView x:Name="ListaFitTest"
                   FontSize="20"
-                  Margin="-133,45,25,25"
+                  Margin="-105,45,25,25"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   Width="1000"
                   ItemContainerStyle="{StaticResource CustomListViewItemStyle}"
@@ -36,10 +34,10 @@
         <StackPanel Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
                 <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="NuovoFitTest_Click"/>
-                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaFitTestCommand}" Click="GuardaFitTest_Click" IsEnabled="False"/>
                 <Button Name="ButtonCopia" Content="Copia" Style="{StaticResource MainWindowButtonTheme}" Click="CopiaFitTest_Click" IsEnabled="False"/>
-                <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="ModificaFitTest_Click" IsEnabled="False"/>
-                <TextBox Name="Ricerca"  Width="300" HorizontalAlignment="Left" Margin="10,4, 0,5" FontSize="26" TextChanged="Ricerca_TextChanged"></TextBox>
+                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateGuardaFitTestCommand}" Click="GuardaFitTest_Click" IsEnabled="False"/>
+                <Button Name="ButtonModifica" Content="Modifica" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateModificaFitTestCommand}" Click="ModificaFitTest_Click" IsEnabled="False"/>
+                <TextBox Name="Ricerca" Width="300" HorizontalAlignment="Left" Margin="10,4,0,5" FontSize="26" TextChanged="Ricerca_TextChanged"/>
                 <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_Click"/>
             </StackPanel>
         </StackPanel>

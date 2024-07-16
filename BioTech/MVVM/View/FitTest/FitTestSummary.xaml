@@ -6,10 +6,254 @@
              mc:Ignorable="d" 
              Background="Transparent">
     <Grid>
-
         <StackPanel>
-            <TextBlock Foreground="White">Summary</TextBlock>
-        </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White">Fit test di</TextBlock>
 
+                <TextBlock Name="NomeCognome"
+                           Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White"></TextBlock>
+
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White">•</TextBlock>
+
+                <TextBlock Name="Data"
+                           Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel>
+                <StackPanel>
+                    <TextBlock Margin="380,20,0,0"
+                               FontSize="26"
+                               Foreground="White">Dati corporei:</TextBlock>
+
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <TextBlock Margin="380,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White">Altezza:</TextBlock>
+
+                            <TextBlock Margin="380,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White">Peso:</TextBlock>
+
+                            <TextBlock Margin="380,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White">Grasso corporeo:</TextBlock>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Name="Altezza"
+                                       Margin="30,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White"></TextBlock>
+
+                            <TextBlock Name="Peso"
+                                       Margin="30,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White"></TextBlock>
+
+                            <TextBlock Name="BodyFat"
+                                       Margin="30,5,0,0"
+                                       FontSize="26"
+                                       Foreground="White"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,30,0,0">
+                    <StackPanel>
+                        <TextBlock Margin="10,10,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Circonferenze articolazioni:</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <TextBlock Margin="10,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Polso:</TextBlock>
+
+                                <TextBlock Margin="10,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Ginocchio:</TextBlock>
+
+                                <TextBlock Margin="10,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Caviglia:</TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Name="Polso"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Ginocchio"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Caviglia"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Margin="60,10,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Spessore pliche:</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Bicipite:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Tricipite:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Torace:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Sottoscapola:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Soprailio:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Ombelico:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Coscia:</TextBlock>
+
+                                <TextBlock Margin="60,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Coscia esterna:</TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Name="Bicipite"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Tricipite"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="ToraceP"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Sottoscapola"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Soprailio"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Ombelico"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Coscia"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="CosciaEsterna"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Margin="70,10,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Circonferenze muscolari:</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Braccio:</TextBlock>
+
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Spalle:</TextBlock>
+
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Torace:</TextBlock>
+
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Vita:</TextBlock>
+
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Fianchi:</TextBlock>
+
+                                <TextBlock Margin="70,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White">Gamba:</TextBlock>
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Name="Braccio"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Spalle"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="ToraceC"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Vita"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Fianchi"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+
+                                <TextBlock Name="Gamba"
+                                           Margin="30,5,0,0"
+                                           FontSize="26"
+                                           Foreground="White"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="-130, 50, 0, 0">
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
+                <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="Stampa_Click"/>
+                <Button Content="Confronta" Style="{StaticResource MainWindowButtonTheme}" Click="Confronta_Click" Command="{Binding NavigateConfrontoFitTestCommand}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

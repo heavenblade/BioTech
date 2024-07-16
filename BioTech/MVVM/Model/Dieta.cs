@@ -6,7 +6,7 @@ namespace BioTech.MVVM.Model;
 public class Dieta
 {
     [BsonElement("nome")]
-    public string? Nome { get; set; }
+    public string Nome { get; set; }
 
     [BsonElement("categoria")]
     public string Categoria { get; set; }

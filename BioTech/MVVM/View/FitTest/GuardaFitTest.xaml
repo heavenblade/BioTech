@@ -29,7 +29,7 @@
 
             <StackPanel>
                 <StackPanel>
-                    <TextBlock Margin="380,10,0,0"
+                    <TextBlock Margin="380,20,0,0"
                                FontSize="26"
                                Foreground="White">Dati corporei:</TextBlock>
                     
@@ -47,27 +47,27 @@
                                        FontSize="26"
                                        Foreground="White">Grasso corporeo:</TextBlock>
                         </StackPanel>
-                        
                         <StackPanel>
                             <TextBlock Name="Altezza"
-                                       Margin="20,5,0,0"
+                                       Margin="30,5,0,0"
                                        FontSize="26"
                                        Foreground="White">Test</TextBlock>
 
                             <TextBlock Name="Peso"
-                                       Margin="20,5,0,0"
+                                       Margin="30,5,0,0"
                                        FontSize="26"
                                        Foreground="White">Test</TextBlock>
 
 
                             <TextBlock Name="BodyFat"
-                                       Margin="20,5,0,0"
+                                       Margin="30,5,0,0"
                                        FontSize="26"
                                        Foreground="White">Test</TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,30,0,0">
                     <StackPanel>
                         <TextBlock Margin="10,10,0,0"
                                    FontSize="26"
@@ -88,18 +88,18 @@
                             </StackPanel>
                             <StackPanel>
                                 <TextBlock Name="Polso"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Ginocchio"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
 
                                 <TextBlock Name="Caviglia"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
                             </StackPanel>
@@ -145,42 +145,42 @@
                             </StackPanel>
                             <StackPanel>
                                 <TextBlock Name="Bicipite"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Tricipite"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="ToraceP"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Sottoscapola"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Soprailio"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Ombelico"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
-                                <TextBlock Name="CosciaP"
-                                           Margin="20,5,0,0"
+                                <TextBlock Name="Coscia"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="CosciaEsterna"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
                             </StackPanel>
@@ -214,42 +214,46 @@
 
                                 <TextBlock Margin="70,5,0,0"
                                            FontSize="26"
-                                           Foreground="White">Coscia:</TextBlock>
+                                           Foreground="White">Gamba:</TextBlock>
                             </StackPanel>
                             <StackPanel>
                                 <TextBlock Name="Braccio"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Spalle"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="ToraceC"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Vita"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
                                 <TextBlock Name="Fianchi"
-                                           Margin="20,5,0,0"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
 
-                                <TextBlock Name="CosciaC"
-                                           Margin="20,5,0,0"
+                                <TextBlock Name="Gamba"
+                                           Margin="30,5,0,0"
                                            FontSize="26"
                                            Foreground="White">Test</TextBlock>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="-130, 50, 0, 0">
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
+                <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="Stampa_Click"/>
             </StackPanel>
         </StackPanel>
 

@@ -8,10 +8,12 @@ class FitTestViewModel : BaseViewModel
 {
     public ICommand NavigateGuardaFitTestCommand { get; }
     public ICommand NavigateFitTestGeneralitàCommand { get; }
+    public ICommand NavigateModificaFitTestCommand { get; }
 
     public FitTestViewModel(NavigationStore navigationStore)
     {
         NavigateGuardaFitTestCommand = new NavigateCommand<GuardaFitTestViewModel>(navigationStore, () => new(navigationStore));
         NavigateFitTestGeneralitàCommand = new NavigateCommand<FitTestGeneralitàViewModel>(navigationStore, () => new(navigationStore));
+        NavigateModificaFitTestCommand = new NavigateCommand<FitTestPlicheViewModel>(navigationStore, () => new(navigationStore));
     }
 }
