@@ -106,7 +106,7 @@
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding AlimentiViewCommand}"
+                             Command="{Binding NavigateAlimentiCommand}"
                              Click="ChangeTab_Click"/>
             </StackPanel>
 

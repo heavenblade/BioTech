@@ -1,7 +1,7 @@
 ﻿using BioTech.MVVM.Model.Stores;
 using System.Windows;
 using System.Windows.Controls;
-using BioTech.Core;
+using BioTech.Core.Database;
 
 namespace BioTech.MVVM.View.FitTest;
 

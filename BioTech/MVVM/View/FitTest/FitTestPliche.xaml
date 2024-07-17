@@ -68,9 +68,9 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10, 10, 0, 0">
+                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
                 <Button Content="Indietro" Style="{StaticResource MainWindowButtonTheme}" Click="Indietro_Click" Command="{Binding NavigateFitTestGeneralitàCommand}"/>
                 <Button Name="AvantiButton" Content="Avanti" Style="{StaticResource MainWindowButtonTheme}" Click="Avanti_Click" Command="{Binding NavigateFitTestCirconferenzeCommand}" IsEnabled="False"/>
-                <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
             </StackPanel>
         </StackPanel>
 

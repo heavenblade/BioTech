@@ -1,9 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using BioTech.Core;
+using BioTech.Core.Database;
 using BioTech.MVVM.Model;
 using BioTech.MVVM.Model.Stores;
-using Microsoft.VisualBasic;
 
 namespace BioTech.MVVM.View.Allenamenti;
 
@@ -26,23 +25,14 @@ public partial class ModificaTabellaView : UserControl
         if (allenamento == null)
             return;
 
-        NomeTabella.Text = allenamento.Nome;
-        CategoriaTabella.Text = allenamento.Categoria;
-        ContenutoTabella.Text = allenamento.Tabella;
+        NomeAllenamento.Text = allenamento.Nome;
+        CategoriaAllenamento.Text = allenamento.Categoria;
+        Tabella.Text = allenamento.Tabella;
     }
 
     private void CleanAndExit_Click(object sender, RoutedEventArgs e)
     {
         AllenamentoStore.CurrentAllenamento = null;
-    }
-
-    private void RinominaTabella_OnClick(object sender, RoutedEventArgs e)
-    {
-        string newName = Interaction.InputBox("Inserire il nuovo nome per la tabella selezionata:", "Rinomina");
-
-        MongoDbClient.RenameAllenamento(NomeTabella.Text, newName);
-
-        NomeTabella.Text = newName;
     }
 
     private void StampaButton_Click(object sender, RoutedEventArgs e)
@@ -52,12 +42,53 @@ public partial class ModificaTabellaView : UserControl
 
     private void SalvaButton_Click(object sender, RoutedEventArgs e)
     {
-        string nome = NomeTabella.Text;
-        string categoria = CategoriaTabella.Text;
-        string tabella = ContenutoTabella.Text;
+        Allenamento allenamento = new()
+        {
+            Nome = NomeAllenamento.Text,
+            Categoria = CategoriaAllenamento.Text,
+            Tabella = Tabella.Text
+        };
 
-        MongoDbClient.UpdateAllenamento(nome, categoria, tabella);
+        if (BaseDataChanged(AllenamentoStore.CurrentAllenamento!, allenamento))
+        {
+            try
+            {
+                MongoDbClient.InsertNuovoAllenamento(allenamento);
 
-        MessageBox.Show("Tabella salvata con successo nel database!");
+                MongoDbClient.DeleteAllenamento(AllenamentoStore.CurrentAllenamento!);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante l'aggiornamento!");
+
+                return;
+            }
+        }
+        else
+        {
+            try
+            {
+                MongoDbClient.UpdateAllenamento(allenamento);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante l'aggiornamento!");
+
+                return;
+            }
+        }
+
+        MessageBox.Show("Allenamento salvato con successo!");
+    }
+
+    private static bool BaseDataChanged(Allenamento saved, Allenamento current)
+    {
+        if (!saved.Nome.Equals(current.Nome))
+            return true;
+
+        if (!saved.Categoria.Equals(current.Categoria))
+            return true;
+
+        return false;
     }
 }

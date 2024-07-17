@@ -10,10 +10,22 @@
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock Name="NomeTabella"
-                       Margin="10,10,0,0"
-                       FontSize="30"
-                       Foreground="White"></TextBlock>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="NomeTabella"
+                           Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White"></TextBlock>
+
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White">•</TextBlock>
+
+                <TextBlock Name="CategoriaTabella"
+                           Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White"></TextBlock>
+            </StackPanel>
 
             <TextBox Name="ContenutoTabella"
                      HorizontalAlignment="Left" 

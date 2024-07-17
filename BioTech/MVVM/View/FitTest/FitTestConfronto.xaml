@@ -349,8 +349,8 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="-130, 50, 0, 0">
-                <Button Content="Indietro" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestSummaryCommand}"/>
                 <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Click="CleanAndExit_Click" Command="{Binding NavigateFitTestCommand}"/>
+                <Button Content="Indietro" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestSummaryCommand}"/>
             </StackPanel>
         </StackPanel>
     </Grid>

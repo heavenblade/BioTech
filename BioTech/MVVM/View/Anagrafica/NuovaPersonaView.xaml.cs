@@ -1,7 +1,7 @@
-﻿using BioTech.Core;
-using BioTech.MVVM.Model;
+﻿using BioTech.MVVM.Model;
 using System.Windows;
 using System.Windows.Controls;
+using BioTech.Core.Database;
 using BioTech.MVVM.Model.Stores;
 
 namespace BioTech.MVVM.View.Anagrafica;

@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using BioTech.MVVM.Model;
-using BioTech.Core;
+using BioTech.Core.Database;
 
 namespace BioTech.MVVM.View.Diete;
 
@@ -73,9 +73,7 @@ public partial class ModificaDietaView : UserControl
             }
         }
 
-        MessageBox.Show("Persona salvata con successo!");
-
-        return;
+        MessageBox.Show("Dieta salvata con successo!");
     }
 
     private static bool BaseDataChanged(Dieta saved, Dieta current)

@@ -25,6 +25,7 @@ public partial class GuardaTabellaView : UserControl
             return;
 
         NomeTabella.Text = allenamento.Nome;
+        CategoriaTabella.Text = allenamento.Categoria;
         ContenutoTabella.Text = allenamento.Tabella;
     }
 

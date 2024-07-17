@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using BioTech.Core;
+using BioTech.Core.Database;
 using BioTech.MVVM.Model;
 
 namespace BioTech.MVVM.View.Diete;

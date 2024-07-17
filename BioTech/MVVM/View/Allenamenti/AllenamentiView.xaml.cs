@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using BioTech.Core;
+using BioTech.Core.Database;
 using BioTech.MVVM.Model.Stores;
 
 namespace BioTech.MVVM.View.Allenamenti;
@@ -36,7 +36,7 @@ public partial class AllenamentiView : UserControl
         ButtonModifica.IsEnabled = true;
     }
 
-    private void LoadTabella_OnClick(object sender, RoutedEventArgs e)
+    private void LoadTabella(object sender, RoutedEventArgs e)
     {
         var nome = (string)ListaAllenamenti.SelectedItem;
 
@@ -46,7 +46,7 @@ public partial class AllenamentiView : UserControl
         AllenamentoStore.CurrentAllenamento = MongoDbClient.FindAllenamento(nome, categoria);
     }
 
-    private void ButtonReset_OnClick(object sender, RoutedEventArgs e)
+    private void ButtonReset_Click(object sender, RoutedEventArgs e)
     {
         var categoria = CategoriaFilter.Children.OfType<RadioButton>()
            .FirstOrDefault(r => r.IsChecked.HasValue && (bool)r.IsChecked)!.Content.ToString();

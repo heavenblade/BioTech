@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using BioTech.MVVM.Commands;
+using BioTech.MVVM.ViewModel.Alimenti;
 using BioTech.MVVM.ViewModel.Allenamenti;
 using BioTech.MVVM.ViewModel.Anagrafica;
 using BioTech.MVVM.ViewModel.Diete;
@@ -15,10 +16,11 @@ class HomeViewModel : BaseViewModel
     public object CurrentViewModel => _navigationStore.CurrentView;
 
     public ICommand NavigateHomeCommand { get; }
-    public ICommand NavigateAllenamentiCommand { get; }
-    public ICommand NavigateDieteCommand { get; }
     public ICommand NavigateAnagraficaCommand { get; }
     public ICommand NavigateFitTestCommand { get; }
+    public ICommand NavigateAllenamentiCommand { get; }
+    public ICommand NavigateDieteCommand { get; }
+    public ICommand NavigateAlimentiCommand { get; }
 
     public HomeViewModel(NavigationStore navigationStore)
     {
@@ -26,11 +28,11 @@ class HomeViewModel : BaseViewModel
         _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
         NavigateHomeCommand = new NavigateCommand<HomeViewModel>(navigationStore, () => new(navigationStore));
-        NavigateAllenamentiCommand = new NavigateCommand<AllenamentiViewModel>(navigationStore, () => new(navigationStore));
-        NavigateDieteCommand = new NavigateCommand<DieteViewModel>(navigationStore, () => new(navigationStore));
         NavigateAnagraficaCommand = new NavigateCommand<AnagraficaViewModel>(navigationStore, () => new(navigationStore));
         NavigateFitTestCommand = new NavigateCommand<FitTestViewModel>(navigationStore, () => new(navigationStore));
-
+        NavigateAllenamentiCommand = new NavigateCommand<AllenamentiViewModel>(navigationStore, () => new(navigationStore));
+        NavigateDieteCommand = new NavigateCommand<DieteViewModel>(navigationStore, () => new(navigationStore));
+        NavigateAlimentiCommand = new NavigateCommand<AlimentiViewModel>(navigationStore, () => new(navigationStore));
     }
 
     private void OnCurrentViewModelChanged()

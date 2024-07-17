@@ -1,7 +1,7 @@
-﻿using BioTech.Core;
-using BioTech.MVVM.Model.Stores;
+﻿using BioTech.MVVM.Model.Stores;
 using System.Windows;
 using System.Windows.Controls;
+using BioTech.Core.Database;
 
 namespace BioTech.MVVM.View.Diete;
 
@@ -38,7 +38,7 @@ public partial class DieteView : UserControl
         ButtonModifica.IsEnabled = true;
     }
 
-    private void GuardaOModificaDieta_Click(object sender, RoutedEventArgs e)
+    private void LoadDieta(object sender, RoutedEventArgs e)
     {
         var nome = (string)ListaDiete.SelectedItems[0]!;
         var categoria = CategoriaFilter.Children.OfType<RadioButton>()

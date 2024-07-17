@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using BioTech.Core;
+using BioTech.Core.Database;
 using BioTech.MVVM.Model.Stores;
 using BioTech.MVVM.ViewModel;
 using BioTech.MVVM.ViewModel.Navigation;
