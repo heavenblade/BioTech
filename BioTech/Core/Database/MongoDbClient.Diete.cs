@@ -21,13 +21,14 @@ public static partial class MongoDbClient
         return _dieteColl.Find(filter).ToList();
     }
 
-    public static bool CheckIfDietaIsPresentByName(string name)
+    public static bool CheckIfDietaIsPresente(string name, string categoria)
     {
         FilterDefinition<Dieta> filter = Builders<Dieta>.Filter.Eq(x => x.Nome, name);
+        filter &= Builders<Dieta>.Filter.Eq(x => x.Categoria, categoria);
 
         List<Dieta>? result = _dieteColl.Find(filter).ToList();
 
-        return result.Count > 0;
+        return result.Any();
     }
 
     public static Dieta FindDieta(string? name, string? categoria)

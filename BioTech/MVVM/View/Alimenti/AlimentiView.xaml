@@ -24,15 +24,16 @@
 
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Nome}" Width="700"/>
-                    <GridViewColumn Header="Tipologia" DisplayMemberBinding="{Binding Cognome}" Width="300"/>
+                    <GridViewColumn Header="Nome" DisplayMemberBinding="{Binding Nome}" Width="630"/>
+                    <GridViewColumn Header="Tipologia" DisplayMemberBinding="{Binding Tipologia}" Width="370"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <StackPanel Grid.Column="0" Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="20,15,0,0">
-                <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateFitTestGeneralitàCommand}" Click="NuovoAlimento_Click"/>
+                <Button Content="Nuovo" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateNuovoAlimentoCommand}" Click="NuovoAlimento_Click"/>
+                <Button Name="ButtonGuarda" Content="Guarda" Style="{StaticResource MainWindowButtonTheme}" Click="LoadAlimento" IsEnabled="False"/>
                 <TextBox Name="Ricerca" Width="300" HorizontalAlignment="Left" Margin="10,4,0,5" FontSize="26" TextChanged="Ricerca_TextChanged"/>
                 <Button Content="Reset" Style="{StaticResource MainWindowButtonTheme}" Click="ButtonReset_Click"/>
             </StackPanel>

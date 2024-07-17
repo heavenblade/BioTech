@@ -21,13 +21,14 @@ public static partial class MongoDbClient
         return _allenamentiColl.Find(filter).ToList();
     }
 
-    public static bool CheckIfAllenamentoIsPresentByName(string name)
+    public static bool CheckIfAllenamentoIsPresente(string name, string categoria)
     {
         FilterDefinition<Allenamento> filter = Builders<Allenamento>.Filter.Eq(x => x.Nome, name);
+        filter &= Builders<Allenamento>.Filter.Eq(x => x.Categoria, categoria);
 
         List<Allenamento>? result = _allenamentiColl.Find(filter).ToList();
 
-        return result.Count > 0;
+        return result.Any();
     }
 
     public static Allenamento FindAllenamento(string? name, string? categoria)

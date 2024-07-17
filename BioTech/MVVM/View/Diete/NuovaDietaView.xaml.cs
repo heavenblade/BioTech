@@ -19,7 +19,7 @@ public partial class NuovaDietaView : UserControl
 
     private void SalvaButton_Click(object sender, RoutedEventArgs e)
     {
-        if (MongoDbClient.CheckIfDietaIsPresentByName(NomeNuovaDieta.Text))
+        if (MongoDbClient.CheckIfDietaIsPresente(NomeNuovaDieta.Text, CategoriaNuovaDieta.Text))
         {
             MessageBox.Show("È già presente nel database una dieta con questo nome.\nModificarlo e riprovare!");
 

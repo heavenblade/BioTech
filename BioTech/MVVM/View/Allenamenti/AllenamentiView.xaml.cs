@@ -29,7 +29,6 @@ public partial class AllenamentiView : UserControl
         ListaAllenamenti.ItemsSource = ricerca.Equals("") ? MongoDbClient.GetAllenamentiPerCategoria(categoria).Select(x => x.Nome).ToList()
             : MongoDbClient.GetAllenamentiPerCategoriaWithFilter(categoria, ricerca).Select(x => x.Nome).ToList();
     
-
     private void OnSelectedAllenamento(object sender, RoutedEventArgs e)
     {
         ButtonGuarda.IsEnabled = true;

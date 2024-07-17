@@ -199,6 +199,12 @@
                     <DataTemplate DataType="{x:Type fitTestVm:FitTestConfrontoViewModel}">
                         <fitTestV:FitTestConfronto/>
                     </DataTemplate>
+
+                    <!-- Alimenti views -->
+                    <DataTemplate DataType="{x:Type alimentiVm:NuovoAlimentoViewModel}">
+                        <alimentiV:NuovoAlimentoView/>
+                    </DataTemplate>
+
                 </ContentControl.Resources>
             </ContentControl>
         </Grid>

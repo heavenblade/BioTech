@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="BioTech.MVVM.View.Alimenti.NuovoAlimentoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:items="clr-namespace:BioTech.MVVM.Model.Items"
+             mc:Ignorable="d" 
+             Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition  Height="80"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <items:TipologieAlimenti x:Key="tipologie"/>
+            </StackPanel.Resources>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Nome nuovo alimento</TextBlock>
+
+            <TextBox Name="NomeNuovoAlimento" Width="400" HorizontalAlignment="Left" Margin="0,5, 0,0"
+                     FontSize="22"/>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Tipologia</TextBlock>
+            
+            <ComboBox Name="TipologiaNuovoAlimento"
+                      HorizontalAlignment="Left"
+                      ItemsSource="{StaticResource tipologie}"
+                      Text="Seleziona"
+                      IsReadOnly="True" Width="400"
+                      Margin="0,5,0,0"
+                      FontSize="22"/>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Valori nutrizionali (per 100gr)</TextBlock>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Energia</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Grassi insaturi</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Grassi saturi</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Fibre</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBox Name="Energia" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,15,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="GrassiInsaturi" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="GrassiSaturi" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="Fibre" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">KCal</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock Margin="100,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Carboidrati</TextBlock>
+                        <TextBlock Margin="100,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Zuccheri</TextBlock>
+                        <TextBlock Margin="100,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Proteine</TextBlock>
+                        <TextBlock Margin="100,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">Sale</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBox Name="Carboidrati" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,15,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="Zuccheri" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="Proteine" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                        <TextBox Name="Sale" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Margin="10,13,0,0"
+                                 FontSize="26"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                        <TextBlock Margin="10,15,0,0"
+                                   FontSize="26"
+                                   Foreground="White">gr</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10,10,0,0">
+            <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateAlimentiCommand}"/>
+            <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
+            <Button Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

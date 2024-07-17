@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace BioTech.MVVM.Model;
+namespace BioTech.MVVM.Model.Items;
 
 public class CategorieAllenamenti : ObservableCollection<string>
 {

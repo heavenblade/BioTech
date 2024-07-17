@@ -19,7 +19,7 @@ public partial class NuovoAllenamentoView : UserControl
 
     private void SalvaButton_Click(object sender, RoutedEventArgs e)
     {
-        if (MongoDbClient.CheckIfAllenamentoIsPresentByName(NomeNuovaTabella.Text))
+        if (MongoDbClient.CheckIfAllenamentoIsPresente(NomeNuovaTabella.Text, CategoriaNuovoAllenamento.Text))
         {
             MessageBox.Show("È già presente nel database una tabella con questo nome.\nModificarlo e riprovare!");
 
@@ -45,7 +45,5 @@ public partial class NuovoAllenamentoView : UserControl
         }
 
         MessageBox.Show("La nuova tabella è stata salvata con successo!");
-
-        return;
     }
 }

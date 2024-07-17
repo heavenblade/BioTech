@@ -26,14 +26,12 @@ public static partial class MongoDbClient
         filter &= Builders<Persona>.Filter.Eq(x => x.Città, città);
         filter &= Builders<Persona>.Filter.Eq(x => x.Telefono, telefono);
 
-        Persona? result = _personeColl.Find(filter).FirstOrDefault();
-
-        return result;
+        return _personeColl.Find(filter).FirstOrDefault();
     }
 
     public static List<Persona> GetPersoneWithFilter(string ricerca)
     {
-        FilterDefinition<Persona>? filter = Builders<Persona>.Filter.Or(
+        FilterDefinition<Persona> filter = Builders<Persona>.Filter.Or(
             Builders<Persona>.Filter.Where(x => x.Nome.ToLower().Contains(ricerca)),
             Builders<Persona>.Filter.Where(x => x.Cognome.ToLower().Contains(ricerca)),
             Builders<Persona>.Filter.Where(x => x.Città.ToLower().Contains(ricerca)));
@@ -51,7 +49,7 @@ public static partial class MongoDbClient
 
         List<Persona>? result = _personeColl.Find(filter).ToList();
 
-        return result.Count > 0;
+        return result.Any();
     }
 
     public static void InsertNuovaPersona(Persona persona)

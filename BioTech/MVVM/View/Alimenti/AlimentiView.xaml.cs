@@ -1,5 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using BioTech.Core.Database;
+using BioTech.MVVM.Model;
+using BioTech.MVVM.Model.Stores;
 
 namespace BioTech.MVVM.View.Alimenti;
 
@@ -12,27 +15,30 @@ public partial class AlimentiView : UserControl
     {
         InitializeComponent();
 
-        PrepareContent();
+        BuildListaAlimenti(Ricerca.Text);
     }
 
-    private void PrepareContent()
-    {
-
-    }
-
-    private void BuildListaAlimenti(string ricerca)
-    {
-
-    }
+    private void BuildListaAlimenti(string ricerca) =>
+        ListaAlimenti.ItemsSource = ricerca.Equals("") ? MongoDbClient.GetAlimenti() : MongoDbClient.GetAlimentiWithFilter(ricerca);
 
     private void OnSelectedAlimento(object sender, RoutedEventArgs e)
     {
-
+        ButtonGuarda.IsEnabled = true;
     }
 
     private void NuovoAlimento_Click(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    private void LoadAlimento(object sender, RoutedEventArgs e)
+    {
+        var selectedAlimento = ListaAlimenti.SelectedItem as Alimento;
+
+        string nome = selectedAlimento!.Nome;
+        string tipologia = selectedAlimento.Tipologia;
+
+        AlimentoStore.CurrentAlimento = MongoDbClient.FindAlimento(nome, tipologia);
     }
 
     private void Ricerca_TextChanged(object sender, TextChangedEventArgs e) =>
