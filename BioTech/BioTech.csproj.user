@@ -39,6 +39,9 @@
     <Page Update="MVVM\View\Alimenti\AlimentiView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\Alimenti\GuardaAlimentoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\Alimenti\NuovoAlimentoView.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -40,17 +40,23 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="Braccio" Width="300" HorizontalAlignment="Left" Margin="41,20, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Braccio" Width="100" HorizontalAlignment="Left" Margin="51,20,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Spalle" Width="300" HorizontalAlignment="Left" Margin="41,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Spalle" Width="100" HorizontalAlignment="Left" Margin="51,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Torace" Width="300" HorizontalAlignment="Left" Margin="41,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Torace" Width="100" HorizontalAlignment="Left" Margin="51,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Vita" Width="300" HorizontalAlignment="Left" Margin="41,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Vita" Width="100" HorizontalAlignment="Left" Margin="51,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Fianchi" Width="300" HorizontalAlignment="Left" Margin="41,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Fianchi" Width="100" HorizontalAlignment="Left" Margin="51,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Gamba" Width="300" HorizontalAlignment="Left" Margin="41,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Gamba" Width="100" HorizontalAlignment="Left" Margin="51,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
                 </StackPanel>
             </StackPanel>
 
@@ -73,11 +79,14 @@
                                Foreground="White">Caviglia</TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <TextBox x:Name="Polso" Width="300" HorizontalAlignment="Left" Margin="10,20, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Polso" Width="100" HorizontalAlignment="Left" Margin="20,20,0,5" FontSize="26"
+                             TextAlignment="Right"  TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Ginocchio" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Ginocchio" Width="100" HorizontalAlignment="Left" Margin="20,8,0,5" FontSize="26" 
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
 
-                    <TextBox x:Name="Caviglia" Width="300" HorizontalAlignment="Left" Margin="10,8, 0,5" FontSize="26" TextChanged="OnTextChanged"/>
+                    <TextBox x:Name="Caviglia" Width="100" HorizontalAlignment="Left" Margin="20,8,0,5" FontSize="26"
+                             TextAlignment="Right" TextChanged="OnTextChanged"/>
                 </StackPanel>
             </StackPanel>
 

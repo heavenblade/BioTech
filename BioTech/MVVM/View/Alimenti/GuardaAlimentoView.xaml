@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="BioTech.MVVM.View.Alimenti.GuardaAlimentoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition  Height="80"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="NomeAlimento"
+                           Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White"></TextBlock>
+
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White">•</TextBlock>
+
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="30"
+                           Foreground="White">Scheda nutrizionale</TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10,10,0,0"
+                           FontSize="26"
+                           Foreground="White">Valori di riferimento per</TextBlock>
+
+                <TextBlock Name="UnitàDiMisura"
+                           Margin="7,10,0,0"
+                           FontSize="26"
+                           Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Energia</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Grassi insaturi</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Grassi saturi</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Fibre</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Carboidrati</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Zuccheri</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Proteine</TextBlock>
+                    <TextBlock Margin="10,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Sale</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Name="Energia" 
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="GrassiInsaturi"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="GrassiSaturi"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="Fibre"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="Carboidrati"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="Zuccheri"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="Proteine"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                    <TextBlock Name="Sale"
+                               Margin="25,15,0,0"
+                               FontSize="26"
+                               Foreground="White"
+                               TextAlignment="Right"></TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">Kcal</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                    <TextBlock Margin="5,15,0,0"
+                               FontSize="26"
+                               Foreground="White">gr</TextBlock>
+                </StackPanel>
+                <wpf:PieChart Name="Chart" LegendLocation="Right" Margin="100,0,0,0" 
+                              Hoverable="False" DataTooltip="{x:Null}" Height="500" Width="500">
+                    <wpf:PieChart.Series>
+                        <wpf:PieSeries Name="GrassiSeries" Title="Grassi"
+                                       LabelPoint="{Binding PointLabel}"/>
+                        <wpf:PieSeries Name="FibreSeries" Title="Fibre"
+                                       LabelPoint="{Binding PointLabel}"/>
+                        <wpf:PieSeries Name="CarboidratiSeries" Title="Carboidrati"
+                                       LabelPoint="{Binding PointLabel}"/>
+                        <wpf:PieSeries Name="ProteineSeries" Title="Proteine"
+                                       LabelPoint="{Binding PointLabel}"/>
+                    </wpf:PieChart.Series>
+                </wpf:PieChart>
+</StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10,10,0,0">
+            <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateAlimentiCommand}"/>
+            <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

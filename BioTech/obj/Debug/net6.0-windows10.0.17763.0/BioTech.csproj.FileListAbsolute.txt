@@ -89,3 +89,7 @@ C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.177
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Allenamenti\ModificaTabellaView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Alimenti\NuovoAlimentoView.g.cs
 C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Alimenti\NuovoAlimentoView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Alimenti\GuardaAlimentoView.g.cs
+C:\Users\m.amatori\source\repos\BioTech\BioTech\obj\Debug\net6.0-windows10.0.17763.0\MVVM\View\Alimenti\GuardaAlimentoView.baml
+C:\Users\m.amatori\source\repos\BioTech\BioTech\bin\Debug\net6.0-windows10.0.17763.0\LiveCharts.dll
+C:\Users\m.amatori\source\repos\BioTech\BioTech\bin\Debug\net6.0-windows10.0.17763.0\LiveCharts.Wpf.dll

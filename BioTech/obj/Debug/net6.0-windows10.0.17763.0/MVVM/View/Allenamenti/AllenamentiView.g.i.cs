@@ -92,7 +92,7 @@ namespace BioTech.MVVM.View.Allenamenti {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BioTech;V1.0.0.0;component/mvvm/view/allenamenti/allenamentiview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BioTech;component/mvvm/view/allenamenti/allenamentiview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\View\Allenamenti\AllenamentiView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -27,6 +27,7 @@
                            Foreground="White"></TextBlock>
             </StackPanel>
 
+
             <StackPanel>
                 <StackPanel>
                     <TextBlock Margin="380,20,0,0"

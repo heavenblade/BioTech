@@ -30,7 +30,8 @@ public partial class NuovoAlimentoView : UserControl
         {
             Nome = NomeNuovoAlimento.Text,
             Tipologia = TipologiaNuovoAlimento.Text,
-            Kcal = double.Parse(Energia.Text),
+            UnitàDiMisura = UnitàDiMisura.Text,
+            Energia = double.Parse(Energia.Text),
             GrassiInsaturi = double.Parse(GrassiInsaturi.Text),
             GrassiSaturi = double.Parse(GrassiSaturi.Text),
             Fibre = double.Parse(Fibre.Text),
@@ -52,5 +53,27 @@ public partial class NuovoAlimentoView : UserControl
         }
 
         MessageBox.Show("Il nuovo alimento è stata salvato con successo!");
+    }
+
+    private void OnTextChanged(object sender, RoutedEventArgs e)
+    {
+        if (!NomeNuovoAlimento.Text.Equals("") &&
+            !TipologiaNuovoAlimento.Text.Equals("") &&
+            !UnitàDiMisura.Text.Equals("") &&
+            !Energia.Text.Equals("") &&
+            !GrassiInsaturi.Text.Equals("") &&
+            !GrassiSaturi.Text.Equals("") &&
+            !Fibre.Text.Equals("") &&
+            !Carboidrati.Text.Equals("") &&
+            !Zuccheri.Text.Equals("") &&
+            !Proteine.Text.Equals("") &&
+            !Sale.Text.Equals(""))
+        {
+            SalvaButton.IsEnabled = true;
+        }
+        else
+        {
+            SalvaButton.IsEnabled = false;
+        }
     }
 }

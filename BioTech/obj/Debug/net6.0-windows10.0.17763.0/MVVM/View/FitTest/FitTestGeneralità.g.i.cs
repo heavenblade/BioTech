@@ -148,7 +148,7 @@ namespace BioTech.MVVM.View.FitTest {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BioTech;component/mvvm/view/fittest/fittestgeneralit%c3%a0.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BioTech;V1.0.0.0;component/mvvm/view/fittest/fittestgeneralit%c3%a0.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\View\FitTest\FitTestGeneralità.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -15,14 +15,19 @@
         <StackPanel>
             <StackPanel.Resources>
                 <items:TipologieAlimenti x:Key="tipologie"/>
+                <items:UnitàDiMisuraAlimenti x:Key="unitàDiMisura"/>
             </StackPanel.Resources>
 
             <TextBlock Margin="10,10,0,0"
                        FontSize="30"
                        Foreground="White">Nome nuovo alimento</TextBlock>
 
-            <TextBox Name="NomeNuovoAlimento" Width="400" HorizontalAlignment="Left" Margin="0,5, 0,0"
-                     FontSize="22"/>
+            <TextBox Name="NomeNuovoAlimento" 
+                     Width="400" 
+                     HorizontalAlignment="Left"
+                     Margin="0,5,0,0"
+                     FontSize="22" 
+                     TextChanged="OnTextChanged"/>
 
             <TextBlock Margin="10,10,0,0"
                        FontSize="30"
@@ -34,11 +39,24 @@
                       Text="Seleziona"
                       IsReadOnly="True" Width="400"
                       Margin="0,5,0,0"
-                      FontSize="22"/>
+                      FontSize="22" 
+                      SelectionChanged="OnTextChanged"/>
 
             <TextBlock Margin="10,10,0,0"
                        FontSize="30"
-                       Foreground="White">Valori nutrizionali (per 100gr)</TextBlock>
+                       Foreground="White">Unità di misura</TextBlock>
+
+            <ComboBox Name="UnitàDiMisura"
+                      HorizontalAlignment="Left"
+                      ItemsSource="{StaticResource unitàDiMisura}"
+                      IsReadOnly="True" Width="400"
+                      Margin="0,5,0,0"
+                      FontSize="22"
+                      SelectionChanged="OnTextChanged"/>
+
+            <TextBlock Margin="10,10,0,0"
+                       FontSize="30"
+                       Foreground="White">Valori nutrizionali</TextBlock>
 
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Horizontal">
@@ -61,27 +79,35 @@
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,15,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="GrassiInsaturi" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="GrassiSaturi" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="Fibre" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Margin="10,15,0,0"
                                    FontSize="26"
-                                   Foreground="White">KCal</TextBlock>
+                                   Foreground="White">Kcal</TextBlock>
                         <TextBlock Margin="10,15,0,0"
                                    FontSize="26"
                                    Foreground="White">gr</TextBlock>
@@ -113,22 +139,30 @@
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,15,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="Zuccheri" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="Proteine" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                         <TextBox Name="Sale" 
                                  Width="100" 
                                  HorizontalAlignment="Left" 
                                  Margin="10,13,0,0"
-                                 FontSize="26"/>
+                                 FontSize="26"
+                                 TextAlignment="Right"
+                                 TextChanged="OnTextChanged"/>
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Margin="10,15,0,0"
@@ -151,7 +185,7 @@
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Height="80" Margin="10,10,0,0">
             <Button Content="Esci" Style="{StaticResource MainWindowButtonTheme}" Command="{Binding NavigateAlimentiCommand}"/>
             <Button Content="Stampa" Style="{StaticResource MainWindowButtonTheme}" Click="StampaButton_Click"/>
-            <Button Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click"/>
+            <Button Name="SalvaButton" Content="Salva" Style="{StaticResource MainWindowButtonTheme}" Click="SalvaButton_Click" IsEnabled="False"/>
         </StackPanel>
 
     </Grid>

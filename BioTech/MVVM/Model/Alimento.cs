@@ -11,8 +11,11 @@ public class Alimento
     [BsonElement("tipologia")]
     public string Tipologia { get; set; }
 
-    [BsonElement("kcal")]
-    public double Kcal { get; set; }
+    [BsonElement("unitàDiMisura")]
+    public string UnitàDiMisura { get; set; }
+
+    [BsonElement("energia")]
+    public double Energia { get; set; }
 
     [BsonElement("grassiInsaturi")]
     public double GrassiInsaturi { get; set; }

@@ -205,6 +205,10 @@
                         <alimentiV:NuovoAlimentoView/>
                     </DataTemplate>
 
+                    <DataTemplate DataType="{x:Type alimentiVm:GuardaAlimentoViewModel}">
+                        <alimentiV:GuardaAlimentoView/>
+                    </DataTemplate>
+
                 </ContentControl.Resources>
             </ContentControl>
         </Grid>
